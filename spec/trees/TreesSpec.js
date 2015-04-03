@@ -7,6 +7,11 @@ describe('Trees', function () {
   var tax_tree = trees.parseTaxa(taxonomy.data.response);
   var stree = trees.speciesTree(tax_tree);
 
+  it('parseTaxa should return a rooted tree object', function() {
+    expect(tax_tree['1'].name).toEqual('root');
+    // TODO: add a test for tree-ness
+  });
+
   it('lca should find the lowest common ancestor', function () {
     // when
     var ath = trees.lca(tax_tree, [3702]);
