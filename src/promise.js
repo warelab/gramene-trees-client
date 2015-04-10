@@ -1,6 +1,6 @@
 var axios = require('axios');
 var Q = require('q');
-var trees = require('./taxonomy');
+var taxonomy = require('./taxonomy');
 
 module.exports = {
   get: function (local) {
@@ -22,5 +22,5 @@ function justTheData(json) {
 }
 
 function taxonomyPromise(data) {
-  return Q.fcall(trees.parseTaxa, data);
+  return Q.fcall(taxonomy.tree, data);
 }

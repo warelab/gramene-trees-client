@@ -2,45 +2,22 @@ describe('Trees', function () {
   // json response to http://data.gramene.org/taxonomy/select?rows=-1
   // converted into a commonJS module by prepending json doc with
   // `module.exports = `
-  var taxonomy = require('../support/taxonomyFixture.js');
-  var trees = require('../../src/taxonomy');
-  var tax_tree = trees.parseTaxa(taxonomy.data.response);
-  var stree = trees.speciesTree(tax_tree);
+  var fixture = require('../support/taxonomyFixture.js');
+  var taxonomy = require('../../src/taxonomy');
 
-  it('parseTaxa should return a rooted tree object', function () {
-    expect(tax_tree['1'].name).toEqual('root');
-    // TODO: add a test for tree-ness
-  });
+  var root;
 
-  it('lca should find the lowest common ancestor', function () {
-    // when
-    var ath = trees.lca(tax_tree, [3702]);
-    var arabidopsis = trees.lca(tax_tree, [3702,81972]);
-    var rosids = trees.lca(tax_tree, [3702,29760]);
-    var oryza = trees.lca(tax_tree, [39947,4528,4538]);
-    var poaceae = trees.lca(tax_tree, [39947,4528,4538,4577]);
-
-    expect(ath.id).toEqual(3702);
-    expect(arabidopsis.id).toEqual(3701);
-    expect(rosids.id).toEqual(71275);
-    expect(oryza.id).toEqual(4527);
-    expect(poaceae.id).toEqual(4479);
+  beforeEach(function() {
+    root = taxonomy.tree(fixture.data.response);
   });
 
   it('should populate treemodel api', function () {
-    // when
-    var root = trees.modelRoot(taxonomy.data.response);
-
-    // then
     expect(root).toBeDefined();
     expect(root.isRoot()).toBeTruthy();
     expect(root.hasChildren()).toBeTruthy();
   });
 
   it('should have 42 species', function () {
-    // given
-    var root = trees.modelRoot(taxonomy.data.response);
-
     // when
     var leaves = root.leafNodes();
 
@@ -49,9 +26,6 @@ describe('Trees', function () {
   });
 
   it('should sort child nodes alphabetically', function () {
-    // given
-    var root = trees.modelRoot(taxonomy.data.response);
-
     // when we get all nodes with >1 child
     var multipleChildrenNodes = root.all(function (n) {
       return n.children.length > 1;
@@ -71,9 +45,6 @@ describe('Trees', function () {
   });
 
   it('should compress paths in the tree', function() {
-    // given
-    var root = trees.modelRoot(taxonomy.data.response);
-
     // when ask for all nodes with exactly one child
     var singleChildNode = root.all(function (n) {
       return n.children.length === 1
@@ -85,9 +56,6 @@ describe('Trees', function () {
   });
 
   it('should index nodes by id and name', function() {
-    // given
-    var root = trees.modelRoot(taxonomy.data.response);
-
     // when
     var rootById = root.indices.id[1];
     var rootByName = root.indices.name['root'];
@@ -96,9 +64,6 @@ describe('Trees', function () {
   });
 
   it('should index compressed nodes (nodes that are not traversed by the tree)', function() {
-    // given
-    var root = trees.modelRoot(taxonomy.data.response);
-
     // when
     var cellularByName = root.indices.name['cellular organisms'];
 
@@ -110,7 +75,6 @@ describe('Trees', function () {
 
   it('should calculate last common ancestor from the tree', function() {
     // given
-    var root = trees.modelRoot(taxonomy.data.response);
     var testCases = [
       {name: 'ath', ids: [3702], lca: 3702},
       {name: 'arabidopsis', ids: [3702, 81972], lca: 3701},
@@ -134,7 +98,6 @@ describe('Trees', function () {
 
   it('should find the last common ancestor of all species', function() {
     // given
-    var root = trees.modelRoot(taxonomy.data.response);
     var species = root.leafNodes();
 
     // when
