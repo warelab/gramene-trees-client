@@ -88,7 +88,7 @@ module.exports = {
           })
           .value();
         return parentNodesInCommon.pop();
-      }
+      };
     }
 
     function indexTree(tree, attrs) {
