@@ -21,7 +21,7 @@ describe('TaxonomyPromise', function() {
     });
   });
 
-  it('should request data from http://data.gramene.org/maps/select?type=genome&rows=999999', function() {
+  it('should request data from http://data.gramene.org/taxonomy/select?rows=999999', function() {
     // when
     taxonomyPromiser.get();
 
