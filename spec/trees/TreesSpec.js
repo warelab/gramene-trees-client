@@ -22,7 +22,7 @@ describe('Trees', function () {
     var leaves = root.leafNodes();
 
     // then
-    expect(leaves.length).toEqual(42);
+    expect(leaves.length).toEqual(39);
   });
 
   it('should sort child nodes alphabetically', function () {
