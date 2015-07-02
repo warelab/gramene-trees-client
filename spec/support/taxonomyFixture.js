@@ -1,2582 +1,994 @@
 module.exports = {
   data: {
-    "time": 18.274456,
-    "count": 160,
-    "response": [
+    "responseHeader":{
+      "status":0,
+      "QTime":1,
+      "params":{
+        "q":"*",
+        "rows":"9999999"}},
+    "response":{"numFound":160,"start":0,"docs":[
       {
-        "_id": 1,
-        "synonym": [
-          "all"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "name": "root",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1
-        ]
-      },
+        "id":1,
+        "namespace_s":"ncbi_taxonomy",
+        "synonym_ss":["all"],
+        "id_s":"NCBITaxon:1",
+        "xref_ss":["GC_ID:1"],
+        "name_s":"root",
+        "_terms":"NCBITaxon:1 | root",
+        "_genes":1666975,
+        "_version_":1504713762521743360},
       {
-        "_id": 2759,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Eucarya",
+        "id":2759,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[131567],
+        "id_s":"NCBITaxon:2759",
+        "xref_ss":["GC_ID:1",
+          "PMID:23020233"],
+        "rank_s":"superkingdom",
+        "synonym_ss":["Eucarya",
           "Eucaryotae",
           "eucaryotes",
           "Eukarya",
           "Eukaryotae",
           "eukaryotes",
-          "eukaryotes"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          131567
-        ],
-        "property_value": "has_rank NCBITaxon:superkingdom",
-        "xref": [
-          "GC_ID:1",
-          "PMID:23020233"
-        ],
-        "name": "Eukaryota",
-        "is_a": [
-          131567
-        ]
-      },
+          "eukaryotes"],
+        "name_s":"Eukaryota",
+        "_terms":"NCBITaxon:2759 | Eukaryota",
+        "_genes":1666975,
+        "_version_":1504713762524889088},
       {
-        "_id": 2763,
-        "synonym": [
-          "algae",
+        "id":2763,
+        "synonym_ss":["algae",
           "red algae",
           "red algae",
           "Rhodophyceae",
           "Rhodophycota",
-          "rhodophytes"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          2759
-        ],
-        "name": "Rhodophyta",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          2763,
-          131567
-        ]
-      },
+          "rhodophytes"],
+        "name_s":"Rhodophyta",
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:2763",
+        "is_a_is":[2759],
+        "_terms":"NCBITaxon:2763 | Rhodophyta",
+        "_genes":5106,
+        "_version_":1504713762524889089},
       {
-        "_id": 2797,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Bangiophycideae"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          2763,
-          2797,
-          131567
-        ],
-        "property_value": "has_rank NCBITaxon:class",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          2763
-        ],
-        "name": "Bangiophyceae"
-      },
+        "id":2797,
+        "name_s":"Bangiophyceae",
+        "synonym_ss":["Bangiophycideae"],
+        "rank_s":"class",
+        "is_a_is":[2763],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:2797",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:2797 | Bangiophyceae",
+        "_genes":5106,
+        "_version_":1504713762524889090},
       {
-        "_id": 3041,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Chlorophyta",
-        "is_a": [
-          33090
-        ],
-        "property_value": "has_rank NCBITaxon:phylum",
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          33090,
-          131567
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "algae",
+        "id":3041,
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3041",
+        "is_a_is":[33090],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Chlorophyta",
+        "synonym_ss":["algae",
           "Chlorophycota",
           "Chlorophyta sensu Bremer 1985",
           "green algae",
-          "green algae"
-        ]
-      },
+          "green algae"],
+        "rank_s":"phylum",
+        "_terms":"NCBITaxon:3041 | Chlorophyta",
+        "_genes":22127,
+        "_version_":1504713762524889091},
       {
-        "_id": 3042,
-        "property_value": "has_rank NCBITaxon:order",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          167765,
-          3069
-        ],
-        "name": "Chlamydomonadales",
-        "is_a": [
-          3166
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Chlorococcales",
+        "id":3042,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3166],
+        "id_s":"NCBITaxon:3042",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"order",
+        "synonym_ss":["Chlorococcales",
           "Volvocales",
-          "Volvocida"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          3042,
-          3166,
-          33090,
-          131567
-        ]
-      },
+          "Volvocida"],
+        "name_s":"Chlamydomonadales",
+        "alt_id_is":[167765,
+          3069],
+        "_terms":"NCBITaxon:3042 | Chlamydomonadales",
+        "_genes":14487,
+        "_version_":1504713762524889092},
       {
-        "_id": 3051,
-        "property_value": "has_rank NCBITaxon:family",
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          3042
-        ],
-        "name": "Chlamydomonadaceae",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          3042,
-          3051,
-          3166,
-          33090,
-          131567
-        ]
-      },
+        "id":3051,
+        "name_s":"Chlamydomonadaceae",
+        "rank_s":"family",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3051",
+        "is_a_is":[3042],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3051 | Chlamydomonadaceae",
+        "_genes":14487,
+        "_version_":1504713762524889093},
       {
-        "_id": 3052,
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:genus",
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          3042,
-          3051,
-          3052,
-          3166,
-          33090,
-          131567
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Chlamydomonas",
-        "is_a": [
-          3051
-        ]
-      },
+        "id":3052,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3051],
+        "id_s":"NCBITaxon:3052",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"genus",
+        "name_s":"Chlamydomonas",
+        "_terms":"NCBITaxon:3052 | Chlamydomonas",
+        "_genes":14487,
+        "_version_":1504713762524889094},
       {
-        "_id": 3055,
-        "is_a": [
-          3052
-        ],
-        "name": "Chlamydomonas reinhardtii",
-        "xref": [
-          "GC_ID:1",
-          "PMID:12355262"
-        ],
-        "alt_id": [
-          3058,
-          61248
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          3042,
-          3051,
-          3052,
-          3055,
-          3166,
-          33090,
-          131567
-        ],
-        "synonym": [
-          "Chlamydomonas reihhardtii",
+        "id":3055,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3052],
+        "id_s":"NCBITaxon:3055",
+        "xref_ss":["GC_ID:1",
+          "PMID:12355262"],
+        "rank_s":"species",
+        "synonym_ss":["Chlamydomonas reihhardtii",
           "Chlamydomonas reinhardtii P.A.Dangeard",
           "Chlamydomonas smithii",
           "Chlamydomonas smithii R.W.Howshaw & H.Ettl",
-          "Chlamydonas reinhardtii"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+          "Chlamydonas reinhardtii"],
+        "name_s":"Chlamydomonas reinhardtii",
+        "alt_id_is":[3058,
+          61248],
+        "_terms":"NCBITaxon:3055 | Chlamydomonas reinhardtii",
+        "_genes":14487,
+        "_version_":1504713762524889095},
       {
-        "_id": 3166,
-        "property_value": "has_rank NCBITaxon:class",
-        "namespace": "ncbi_taxonomy",
-        "name": "Chlorophyceae",
-        "is_a": [
-          3041
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          3166,
-          33090,
-          131567
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":3166,
+        "rank_s":"class",
+        "name_s":"Chlorophyceae",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3041],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3166",
+        "_terms":"NCBITaxon:3166 | Chlorophyceae",
+        "_genes":14487,
+        "_version_":1504713762524889096},
       {
-        "_id": 3193,
-        "synonym": [
-          "higher plants",
+        "id":3193,
+        "name_s":"Embryophyta",
+        "synonym_ss":["higher plants",
           "land plants",
           "land plants",
-          "plants"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "name": "Embryophyta",
-        "is_a": [
-          131221
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          33090,
-          35493,
-          131221,
-          131567
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+          "plants"],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3193",
+        "is_a_is":[131221],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3193 | Embryophyta",
+        "_genes":1639742,
+        "_version_":1504713762524889097},
       {
-        "_id": 3208,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          3194
-        ],
-        "is_a": [
-          3193
-        ],
-        "name": "Bryophyta",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3208,
-          33090,
-          35493,
-          131221,
-          131567
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "bryophytes",
+        "id":3208,
+        "is_a_is":[3193],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3208",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Bryophyta",
+        "alt_id_is":[3194],
+        "synonym_ss":["bryophytes",
           "Bryopsida",
           "mosses",
           "mosses",
-          "Musci"
-        ]
-      },
+          "Musci"],
+        "_terms":"NCBITaxon:3208 | Bryophyta",
+        "_genes":32273,
+        "_version_":1504713762524889098},
       {
-        "_id": 3214,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3208,
-          3214,
-          33090,
-          35493,
-          131221,
-          131567,
-          404260
-        ],
-        "is_a": [
-          404260
-        ],
-        "name": "Bryopsida",
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:class"
-      },
+        "id":3214,
+        "name_s":"Bryopsida",
+        "rank_s":"class",
+        "is_a_is":[404260],
+        "id_s":"NCBITaxon:3214",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3214 | Bryopsida",
+        "_genes":32273,
+        "_version_":1504713762524889099},
       {
-        "_id": 3215,
-        "is_a": [
-          114656
-        ],
-        "name": "Funariales",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3208,
-          3214,
-          3215,
-          33090,
-          35493,
-          114656,
-          131221,
-          131567,
-          404260
-        ],
-        "property_value": "has_rank NCBITaxon:order",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":3215,
+        "is_a_is":[114656],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3215",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Funariales",
+        "rank_s":"order",
+        "_terms":"NCBITaxon:3215 | Funariales",
+        "_genes":32273,
+        "_version_":1504713762524889100},
       {
-        "_id": 3216,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3208,
-          3214,
-          3215,
-          3216,
-          33090,
-          35493,
-          114656,
-          131221,
-          131567,
-          404260
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Funariaceae",
-        "is_a": [
-          3215
-        ],
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:family"
-      },
+        "id":3216,
+        "name_s":"Funariaceae",
+        "rank_s":"family",
+        "is_a_is":[3215],
+        "id_s":"NCBITaxon:3216",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3216 | Funariaceae",
+        "_genes":32273,
+        "_version_":1504713762524889101},
       {
-        "_id": 3217,
-        "is_a": [
-          3216
-        ],
-        "name": "Physcomitrella",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3208,
-          3214,
-          3215,
-          3216,
-          3217,
-          33090,
-          35493,
-          114656,
-          131221,
-          131567,
-          404260
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":3217,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3216],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3217",
+        "rank_s":"genus",
+        "name_s":"Physcomitrella",
+        "_terms":"NCBITaxon:3217 | Physcomitrella",
+        "_genes":32273,
+        "_version_":1504713762524889102},
       {
-        "_id": 3218,
-        "synonym": [
-          "Physcomitrella patens subsp. patens",
-          "Physcomitrium patens"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3208,
-          3214,
-          3215,
-          3216,
-          3217,
-          3218,
-          33090,
-          35493,
-          114656,
-          131221,
-          131567,
-          404260
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "name": "Physcomitrella patens",
-        "is_a": [
-          3217
-        ],
-        "alt_id": [
-          1130753,
-          145481
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":3218,
+        "rank_s":"species",
+        "synonym_ss":["Physcomitrella patens subsp. patens",
+          "Physcomitrium patens"],
+        "name_s":"Physcomitrella patens",
+        "alt_id_is":[1130753,
+          145481],
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3217],
+        "id_s":"NCBITaxon:3218",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:3218 | Physcomitrella patens",
+        "_genes":32273,
+        "_version_":1504713762524889103},
       {
-        "_id": 3242,
-        "synonym": [
-          "club mosses",
-          "club-mosses"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "name": "Lycopodiophyta",
-        "is_a": [
-          58023
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3242,
-          33090,
-          35493,
-          58023,
-          131221,
-          131567
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":3242,
+        "name_s":"Lycopodiophyta",
+        "synonym_ss":["club mosses",
+          "club-mosses"],
+        "id_s":"NCBITaxon:3242",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[58023],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3242 | Lycopodiophyta",
+        "_genes":34888,
+        "_version_":1504713762524889104},
       {
-        "_id": 3243,
-        "property_value": "has_rank NCBITaxon:class",
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          3242
-        ],
-        "name": "Isoetopsida",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3242,
-          3243,
-          33090,
-          35493,
-          58023,
-          131221,
-          131567
-        ]
-      },
+        "id":3243,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:3243",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[3242],
+        "rank_s":"class",
+        "name_s":"Isoetopsida",
+        "_terms":"NCBITaxon:3243 | Isoetopsida",
+        "_genes":34888,
+        "_version_":1504713762524889105},
       {
-        "_id": 3244,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          3243
-        ],
-        "name": "Selaginellales",
-        "property_value": "has_rank NCBITaxon:order",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3242,
-          3243,
-          3244,
-          33090,
-          35493,
-          58023,
-          131221,
-          131567
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "spike mosses"
-        ]
-      },
+        "id":3244,
+        "name_s":"Selaginellales",
+        "rank_s":"order",
+        "synonym_ss":["spike mosses"],
+        "is_a_is":[3243],
+        "id_s":"NCBITaxon:3244",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3244 | Selaginellales",
+        "_genes":34888,
+        "_version_":1504713762524889106},
       {
-        "_id": 3245,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3242,
-          3243,
-          3244,
-          3245,
-          33090,
-          35493,
-          58023,
-          131221,
-          131567
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "spike moss family"
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          3244
-        ],
-        "name": "Selaginellaceae",
-        "property_value": "has_rank NCBITaxon:family"
-      },
+        "id":3245,
+        "synonym_ss":["spike moss family"],
+        "rank_s":"family",
+        "name_s":"Selaginellaceae",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3244],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3245",
+        "_terms":"NCBITaxon:3245 | Selaginellaceae",
+        "_genes":34888,
+        "_version_":1504713762524889107},
       {
-        "_id": 3246,
-        "is_a": [
-          3245
-        ],
-        "name": "Selaginella",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3242,
-          3243,
-          3244,
-          3245,
-          3246,
-          33090,
-          35493,
-          58023,
-          131221,
-          131567
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":3246,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:3246",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[3245],
+        "rank_s":"genus",
+        "name_s":"Selaginella",
+        "_terms":"NCBITaxon:3246 | Selaginella",
+        "_genes":34888,
+        "_version_":1504713762524889108},
       {
-        "_id": 3398,
-        "name": "Magnoliophyta",
-        "is_a": [
-          58024
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "synonym": [
-          "Angiospermae",
+        "id":3398,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:3398",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[58024],
+        "synonym_ss":["Angiospermae",
           "angiosperms",
           "flowering plants",
-          "flowering plants"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+          "flowering plants"],
+        "name_s":"Magnoliophyta",
+        "_terms":"NCBITaxon:3398 | Magnoliophyta",
+        "_genes":1572581,
+        "_version_":1504713762524889109},
       {
-        "_id": 3602,
-        "property_value": "has_rank NCBITaxon:family",
-        "is_a": [
-          403667
-        ],
-        "name": "Vitaceae",
-        "alt_id": [
-          39206
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "synonym": [
-          "grape family",
-          "Vitidaceae"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3602,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91834,
-          131221,
-          131567,
-          403667,
-          1437183,
-          1437201
-        ]
-      },
+        "id":3602,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3602",
+        "is_a_is":[403667],
+        "synonym_ss":["grape family",
+          "Vitidaceae"],
+        "rank_s":"family",
+        "alt_id_is":[39206],
+        "name_s":"Vitaceae",
+        "_terms":"NCBITaxon:3602 | Vitaceae",
+        "_genes":29971,
+        "_version_":1504713762525937664},
       {
-        "_id": 3603,
-        "name": "Vitis",
-        "is_a": [
-          3602
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3602,
-          3603,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91834,
-          131221,
-          131567,
-          403667,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":3603,
+        "name_s":"Vitis",
+        "rank_s":"genus",
+        "is_a_is":[3602],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3603",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3603 | Vitis",
+        "_genes":29971,
+        "_version_":1504713762525937665},
       {
-        "_id": 3629,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3629,
-          33090,
-          35493,
-          41938,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "mallow family"
-        ],
-        "alt_id": [
-          3639,
+        "id":3629,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[41938],
+        "id_s":"NCBITaxon:3629",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"family",
+        "synonym_ss":["mallow family"],
+        "name_s":"Malvaceae",
+        "alt_id_is":[3639,
           45192,
-          45323
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Malvaceae",
-        "is_a": [
-          41938
-        ],
-        "property_value": "has_rank NCBITaxon:family"
-      },
+          45323],
+        "_terms":"NCBITaxon:3629 | Malvaceae",
+        "_genes":29188,
+        "_version_":1504713762525937666},
       {
-        "_id": 3640,
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:genus",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3629,
-          3640,
-          33090,
-          35493,
-          41938,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          214909,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Theobroma",
-        "is_a": [
-          214909
-        ]
-      },
+        "id":3640,
+        "rank_s":"genus",
+        "name_s":"Theobroma",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[214909],
+        "id_s":"NCBITaxon:3640",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:3640 | Theobroma",
+        "_genes":29188,
+        "_version_":1504713762525937667},
       {
-        "_id": 3641,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3629,
-          3640,
-          3641,
-          33090,
-          35493,
-          41938,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          214909,
-          1437183,
-          1437201
-        ],
-        "synonym": [
-          "cacao",
+        "id":3641,
+        "name_s":"Theobroma cacao",
+        "synonym_ss":["cacao",
           "chocolate",
-          "cocoa"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          3640
-        ],
-        "name": "Theobroma cacao",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:species"
-      },
+          "cocoa"],
+        "rank_s":"species",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3641",
+        "is_a_is":[3640],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3641 | Theobroma cacao",
+        "_genes":29188,
+        "_version_":1504713762525937668},
       {
-        "_id": 3646,
-        "is_a": [
-          91835
-        ],
-        "name": "Malpighiales",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          3976,
+        "id":3646,
+        "is_a_is":[91835],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3646",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Malpighiales",
+        "alt_id_is":[3976,
           40028,
           4003,
           4333,
-          4385
-        ],
-        "property_value": "has_rank NCBITaxon:order",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3646,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "synonym": [
-          "Violales",
-          "Violanae"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+          4385],
+        "synonym_ss":["Violales",
+          "Violanae"],
+        "rank_s":"order",
+        "_terms":"NCBITaxon:3646 | Malpighiales",
+        "_genes":41377,
+        "_version_":1504713762525937669},
       {
-        "_id": 3688,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Flacourtiaceae",
-          "willow family"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3646,
-          3688,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:family",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          124995,
-          45162
-        ],
-        "is_a": [
-          3646
-        ],
-        "name": "Salicaceae"
-      },
+        "id":3688,
+        "alt_id_is":[124995,
+          45162],
+        "name_s":"Salicaceae",
+        "synonym_ss":["Flacourtiaceae",
+          "willow family"],
+        "rank_s":"family",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3688",
+        "is_a_is":[3646],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3688 | Salicaceae",
+        "_genes":41377,
+        "_version_":1504713762525937670},
       {
-        "_id": 3689,
-        "alt_id": [
-          36505
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Populus",
-        "is_a": [
-          238069
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3646,
-          3688,
-          3689,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          238069,
-          1437183,
-          1437201
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "poplar",
+        "id":3689,
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3689",
+        "is_a_is":[238069],
+        "namespace_s":"ncbi_taxonomy",
+        "alt_id_is":[36505],
+        "name_s":"Populus",
+        "synonym_ss":["poplar",
           "poplar trees",
-          "poplars"
-        ]
-      },
+          "poplars"],
+        "rank_s":"genus",
+        "_terms":"NCBITaxon:3689 | Populus",
+        "_genes":41377,
+        "_version_":1504713762525937671},
       {
-        "_id": 3694,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          3689
-        ],
-        "name": "Populus trichocarpa",
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3646,
-          3688,
-          3689,
-          3694,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          238069,
-          1437183,
-          1437201
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "black cottonwood",
+        "id":3694,
+        "synonym_ss":["black cottonwood",
           "Populus balsamifera subsp. trichocarpa",
-          "western balsam poplar"
-        ]
-      },
+          "western balsam poplar"],
+        "rank_s":"species",
+        "name_s":"Populus trichocarpa",
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3694",
+        "is_a_is":[3689],
+        "_terms":"NCBITaxon:3694 | Populus trichocarpa",
+        "_genes":41377,
+        "_version_":1504713762525937672},
       {
-        "_id": 3699,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Capparales"
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          91836
-        ],
-        "name": "Brassicales",
-        "property_value": "has_rank NCBITaxon:order"
-      },
+        "id":3699,
+        "name_s":"Brassicales",
+        "rank_s":"order",
+        "synonym_ss":["Capparales"],
+        "id_s":"NCBITaxon:3699",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[91836],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3699 | Brassicales",
+        "_genes":168340,
+        "_version_":1504713762525937673},
       {
-        "_id": 3700,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "synonym": [
-          "Cruciferae",
-          "mustard family"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "name": "Brassicaceae",
-        "is_a": [
-          3699
-        ],
-        "alt_id": [
-          25773
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:family"
-      },
+        "id":3700,
+        "alt_id_is":[25773],
+        "name_s":"Brassicaceae",
+        "rank_s":"family",
+        "synonym_ss":["Cruciferae",
+          "mustard family"],
+        "id_s":"NCBITaxon:3700",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[3699],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3700 | Brassicaceae",
+        "_genes":168340,
+        "_version_":1504713762525937674},
       {
-        "_id": 3701,
-        "property_value": "has_rank NCBITaxon:genus",
-        "is_a": [
-          980083
-        ],
-        "name": "Arabidopsis",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          45250
-        ],
-        "synonym": [
-          "Cardaminopsis"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          3701,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          980083,
-          1437183,
-          1437201
-        ]
-      },
+        "id":3701,
+        "name_s":"Arabidopsis",
+        "alt_id_is":[45250],
+        "rank_s":"genus",
+        "synonym_ss":["Cardaminopsis"],
+        "is_a_is":[980083],
+        "id_s":"NCBITaxon:3701",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3701 | Arabidopsis",
+        "_genes":66269,
+        "_version_":1504713762525937675},
       {
-        "_id": 3702,
-        "property_value": "has_rank NCBITaxon:species",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          3701
-        ],
-        "name": "Arabidopsis thaliana",
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Arabidopsis thaliana (thale cress)",
+        "id":3702,
+        "name_s":"Arabidopsis thaliana",
+        "synonym_ss":["Arabidopsis thaliana (thale cress)",
           "Arbisopsis thaliana",
           "mouse-ear cress",
           "thale cress",
-          "thale-cress"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          3701,
-          3702,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          980083,
-          1437183,
-          1437201
-        ]
-      },
+          "thale-cress"],
+        "rank_s":"species",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3702",
+        "is_a_is":[3701],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3702 | Arabidopsis thaliana",
+        "_genes":33602,
+        "_version_":1504713762525937676},
       {
-        "_id": 3705,
-        "name": "Brassica",
-        "is_a": [
-          981071
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          3705,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          981071,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":3705,
+        "name_s":"Brassica",
+        "rank_s":"genus",
+        "is_a_is":[981071],
+        "id_s":"NCBITaxon:3705",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3705 | Brassica",
+        "_genes":102071,
+        "_version_":1504713762525937677},
       {
-        "_id": 3711,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          3706
-        ],
-        "is_a": [
-          3705
-        ],
-        "name": "Brassica rapa",
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          3705,
-          3711,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          981071,
-          1437183,
-          1437201
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Brassica rapa L.",
-          "field mustard"
-        ]
-      },
+        "id":3711,
+        "is_a_is":[3705],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3711",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Brassica rapa",
+        "alt_id_is":[3706],
+        "synonym_ss":["Brassica rapa L.",
+          "field mustard"],
+        "rank_s":"species",
+        "_terms":"NCBITaxon:3711 | Brassica rapa",
+        "_genes":42846,
+        "_version_":1504713762525937678},
       {
-        "_id": 3712,
-        "property_value": "has_rank NCBITaxon:species",
-        "namespace": "ncbi_taxonomy",
-        "name": "Brassica oleracea",
-        "is_a": [
-          3705
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          3705,
-          3712,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          981071,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":3712,
+        "rank_s":"species",
+        "name_s":"Brassica oleracea",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3705],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3712",
+        "_terms":"NCBITaxon:3712 | Brassica oleracea",
+        "_genes":59225,
+        "_version_":1504713762525937679},
       {
-        "_id": 3744,
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3744,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:order",
-        "alt_id": [
-          3473,
+        "id":3744,
+        "name_s":"Rosales",
+        "alt_id_is":[3473,
           3601,
-          4266
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          91835
-        ],
-        "name": "Rosales"
-      },
+          4266],
+        "rank_s":"order",
+        "is_a_is":[91835],
+        "id_s":"NCBITaxon:3744",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:3744 | Rosales",
+        "_genes":29499,
+        "_version_":1504713762525937680},
       {
-        "_id": 3745,
-        "property_value": "has_rank NCBITaxon:family",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Rosaceae",
-        "is_a": [
-          3744
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Malaceae",
-          "rose family"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3744,
-          3745,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ]
-      },
+        "id":3745,
+        "is_a_is":[3744],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3745",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Rosaceae",
+        "synonym_ss":["Malaceae",
+          "rose family"],
+        "rank_s":"family",
+        "_terms":"NCBITaxon:3745 | Rosaceae",
+        "_genes":29499,
+        "_version_":1504713762525937681},
       {
-        "_id": 3754,
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3744,
-          3745,
-          3754,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          171637,
-          721805,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          140650,
-          203800
-        ],
-        "name": "Prunus",
-        "is_a": [
-          721805
-        ]
-      },
+        "id":3754,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[721805],
+        "id_s":"NCBITaxon:3754",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"genus",
+        "name_s":"Prunus",
+        "alt_id_is":[140650,
+          203800],
+        "_terms":"NCBITaxon:3754 | Prunus",
+        "_genes":29499,
+        "_version_":1504713762525937682},
       {
-        "_id": 3760,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Amygdalus persica",
+        "id":3760,
+        "id_s":"NCBITaxon:3760",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[3754],
+        "namespace_s":"ncbi_taxonomy",
+        "alt_id_is":[203801],
+        "name_s":"Prunus persica",
+        "rank_s":"species",
+        "synonym_ss":["Amygdalus persica",
           "peach",
           "Persica vulgaris",
-          "Prunus persica var densa"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3744,
-          3745,
-          3754,
-          3760,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          171637,
-          721805,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "alt_id": [
-          203801
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Prunus persica",
-        "is_a": [
-          3754
-        ]
-      },
+          "Prunus persica var densa"],
+        "_terms":"NCBITaxon:3760 | Prunus persica",
+        "_genes":29499,
+        "_version_":1504713762525937683},
       {
-        "_id": 3803,
-        "synonym": [
-          "Leguminosae",
-          "pea family"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3803,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:family",
-        "is_a": [
-          72025
-        ],
-        "name": "Fabaceae",
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":3803,
+        "is_a_is":[72025],
+        "id_s":"NCBITaxon:3803",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Fabaceae",
+        "rank_s":"family",
+        "synonym_ss":["Leguminosae",
+          "pea family"],
+        "_terms":"NCBITaxon:3803 | Fabaceae",
+        "_genes":108247,
+        "_version_":1504713762525937684},
       {
-        "_id": 3814,
-        "property_value": "has_rank NCBITaxon:subfamily",
-        "name": "Papilionoideae",
-        "is_a": [
-          3803
-        ],
-        "alt_id": [
-          24958
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "synonym": [
-          "Faboideae"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3803,
-          3814,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ]
-      },
+        "id":3814,
+        "synonym_ss":["Faboideae"],
+        "rank_s":"subfamily",
+        "name_s":"Papilionoideae",
+        "alt_id_is":[24958],
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3803],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3814",
+        "_terms":"NCBITaxon:3814 | Papilionoideae",
+        "_genes":108247,
+        "_version_":1504713762525937685},
       {
-        "_id": 3846,
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:genus",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3803,
-          3814,
-          3846,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          163735,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Glycine",
-        "is_a": [
-          163735
-        ]
-      },
+        "id":3846,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[163735],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3846",
+        "rank_s":"genus",
+        "name_s":"Glycine",
+        "_terms":"NCBITaxon:3846 | Glycine",
+        "_genes":54174,
+        "_version_":1504713762525937686},
       {
-        "_id": 3847,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Glycine max",
-        "is_a": [
-          1462606
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3803,
-          3814,
-          3846,
-          3847,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          163735,
-          1437183,
-          1437201,
-          1462606
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Glycine max; cv. Wye",
+        "id":3847,
+        "is_a_is":[1462606],
+        "id_s":"NCBITaxon:3847",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Glycine max",
+        "rank_s":"species",
+        "synonym_ss":["Glycine max; cv. Wye",
           "soybean",
-          "soybeans"
-        ]
-      },
+          "soybeans"],
+        "_terms":"NCBITaxon:3847 | Glycine max",
+        "_genes":54174,
+        "_version_":1504713762525937687},
       {
-        "_id": 3877,
-        "property_value": "has_rank NCBITaxon:genus",
-        "is_a": [
-          163742
-        ],
-        "name": "Medicago",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "synonym": [
-          "medics"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3803,
-          3814,
-          3877,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          163742,
-          1437183,
-          1437201
-        ]
-      },
+        "id":3877,
+        "rank_s":"genus",
+        "synonym_ss":["medics"],
+        "name_s":"Medicago",
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:3877",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[163742],
+        "_terms":"NCBITaxon:3877 | Medicago",
+        "_genes":54073,
+        "_version_":1504713762525937688},
       {
-        "_id": 3880,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "barrel medic"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3803,
-          3814,
-          3877,
-          3880,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          163742,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          3877
-        ],
-        "name": "Medicago truncatula"
-      },
+        "id":3880,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:3880",
+        "is_a_is":[3877],
+        "synonym_ss":["barrel medic"],
+        "rank_s":"species",
+        "name_s":"Medicago truncatula",
+        "_terms":"NCBITaxon:3880 | Medicago truncatula",
+        "_genes":54073,
+        "_version_":1504713762525937689},
       {
-        "_id": 4069,
-        "name": "Solanales",
-        "is_a": [
-          91888
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          41936
-        ],
-        "property_value": "has_rank NCBITaxon:order",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4069,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          91888,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "synonym": [
-          "Solananae"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":4069,
+        "name_s":"Solanales",
+        "alt_id_is":[41936],
+        "rank_s":"order",
+        "synonym_ss":["Solananae"],
+        "is_a_is":[91888],
+        "id_s":"NCBITaxon:4069",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4069 | Solanales",
+        "_genes":81736,
+        "_version_":1504713762525937690},
       {
-        "_id": 4070,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "nightshade family"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4069,
-          4070,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          91888,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:family",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          40319
-        ],
-        "is_a": [
-          4069
-        ],
-        "name": "Solanaceae"
-      },
+        "id":4070,
+        "synonym_ss":["nightshade family"],
+        "rank_s":"family",
+        "name_s":"Solanaceae",
+        "alt_id_is":[40319],
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[4069],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4070",
+        "_terms":"NCBITaxon:4070 | Solanaceae",
+        "_genes":81736,
+        "_version_":1504713762525937691},
       {
-        "_id": 4081,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4069,
-          4070,
-          4081,
-          4107,
-          33090,
-          35493,
-          49274,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          91888,
-          131221,
-          131567,
-          424551,
-          424574,
-          1437183,
-          1437201
-        ],
-        "synonym": [
-          "Lycopersicon esculentum",
+        "id":4081,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:4081",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[49274],
+        "rank_s":"species",
+        "synonym_ss":["Lycopersicon esculentum",
           "Lycopersicon esculentum var. esculentum",
           "Lycopersicon lycopersicum",
           "Lycopersicum esculentum",
           "Solanum esculentum",
           "Solanum lycopersicon",
-          "tomato"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "name": "Solanum lycopersicum",
-        "is_a": [
-          49274
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          195582
-        ],
-        "property_value": "has_rank NCBITaxon:species"
-      },
+          "tomato"],
+        "alt_id_is":[195582],
+        "name_s":"Solanum lycopersicum",
+        "_terms":"NCBITaxon:4081 | Solanum lycopersicum",
+        "_genes":38762,
+        "_version_":1504713762525937692},
       {
-        "_id": 4107,
-        "property_value": "has_rank NCBITaxon:genus",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          4080,
-          49275
-        ],
-        "is_a": [
-          424574
-        ],
-        "name": "Solanum",
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Solanum L."
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4069,
-          4070,
-          4107,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          91888,
-          131221,
-          131567,
-          424551,
-          424574,
-          1437183,
-          1437201
-        ]
-      },
+        "id":4107,
+        "rank_s":"genus",
+        "synonym_ss":["Solanum L."],
+        "name_s":"Solanum",
+        "alt_id_is":[4080,
+          49275],
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[424574],
+        "id_s":"NCBITaxon:4107",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:4107 | Solanum",
+        "_genes":81736,
+        "_version_":1504713762525937693},
       {
-        "_id": 4113,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "potato",
+        "id":4113,
+        "is_a_is":[4107],
+        "id_s":"NCBITaxon:4113",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Solanum tuberosum",
+        "alt_id_is":[90692],
+        "rank_s":"species",
+        "synonym_ss":["potato",
           "potatoes",
-          "Solanum tuberosum subsp. tuberosum"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4069,
-          4070,
-          4107,
-          4113,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          91888,
-          131221,
-          131567,
-          424551,
-          424574,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          90692
-        ],
-        "name": "Solanum tuberosum",
-        "is_a": [
-          4107
-        ]
-      },
+          "Solanum tuberosum subsp. tuberosum"],
+        "_terms":"NCBITaxon:4113 | Solanum tuberosum",
+        "_genes":42974,
+        "_version_":1504713762526986240},
       {
-        "_id": 4447,
-        "name": "Liliopsida",
-        "is_a": [
-          1437183
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:class",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183
-        ],
-        "synonym": [
-          "monocots",
+        "id":4447,
+        "synonym_ss":["monocots",
           "monocots",
           "Monocotyledoneae",
-          "monocotyledons"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+          "monocotyledons"],
+        "rank_s":"class",
+        "name_s":"Liliopsida",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[1437183],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4447",
+        "_terms":"NCBITaxon:4447 | Liliopsida",
+        "_genes":1055502,
+        "_version_":1504713762526986241},
       {
-        "_id": 4479,
-        "name": "Poaceae",
-        "is_a": [
-          38820
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:family",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183,
-          1437197
-        ],
-        "synonym": [
-          "Gramineae",
-          "grass family"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":4479,
+        "name_s":"Poaceae",
+        "rank_s":"family",
+        "synonym_ss":["Gramineae",
+          "grass family"],
+        "id_s":"NCBITaxon:4479",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[38820],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4479 | Poaceae",
+        "_genes":1017923,
+        "_version_":1504713762526986242},
       {
-        "_id": 4480,
-        "synonym": [
-          "Aegilops L."
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4480,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147389,
-          359160,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "name": "Aegilops",
-        "is_a": [
-          147389
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          37875,
+        "id":4480,
+        "alt_id_is":[37875,
           58864,
-          72405
-        ]
-      },
+          72405],
+        "name_s":"Aegilops",
+        "rank_s":"genus",
+        "synonym_ss":["Aegilops L."],
+        "id_s":"NCBITaxon:4480",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[147389],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4480 | Aegilops",
+        "_genes":37035,
+        "_version_":1504713762526986243},
       {
-        "_id": 4512,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "barleys",
-          "Hordeum L."
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4512,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147389,
-          359160,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          147389
-        ],
-        "name": "Hordeum"
-      },
+        "id":4512,
+        "name_s":"Hordeum",
+        "synonym_ss":["barleys",
+          "Hordeum L."],
+        "rank_s":"genus",
+        "is_a_is":[147389],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4512",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4512 | Hordeum",
+        "_genes":26067,
+        "_version_":1504713762526986244},
       {
-        "_id": 4513,
-        "alt_id": [
-          36528
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Hordeum vulgare",
-        "is_a": [
-          4512
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4512,
-          4513,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147389,
-          359160,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "barley",
-          "Horedum vulgare"
-        ]
-      },
+        "id":4513,
+        "alt_id_is":[36528],
+        "name_s":"Hordeum vulgare",
+        "rank_s":"species",
+        "synonym_ss":["barley",
+          "Horedum vulgare"],
+        "id_s":"NCBITaxon:4513",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[4512],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4513 | Hordeum vulgare",
+        "_genes":26067,
+        "_version_":1504713762526986245},
       {
-        "_id": 4527,
-        "synonym": [
-          "Oryza L."
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "name": "Oryza",
-        "is_a": [
-          147380
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          77587
-        ]
-      },
+        "id":4527,
+        "alt_id_is":[77587],
+        "name_s":"Oryza",
+        "rank_s":"genus",
+        "synonym_ss":["Oryza L."],
+        "id_s":"NCBITaxon:4527",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[147380],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4527 | Oryza",
+        "_genes":563933,
+        "_version_":1504713762526986246},
       {
-        "_id": 4528,
-        "name": "Oryza longistaminata",
-        "is_a": [
-          4527
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4528,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "synonym": [
-          "long-staminate rice",
-          "red rice"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":4528,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:4528",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[4527],
+        "rank_s":"species",
+        "synonym_ss":["long-staminate rice",
+          "red rice"],
+        "name_s":"Oryza longistaminata",
+        "_terms":"NCBITaxon:4528 | Oryza longistaminata",
+        "_genes":29925,
+        "_version_":1504713762526986247},
       {
-        "_id": 4529,
-        "xref": [
-          "GC_ID:1",
+        "id":4529,
+        "rank_s":"species",
+        "synonym_ss":["common wild rice",
+          "red rice"],
+        "name_s":"Oryza rufipogon",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[4527],
+        "id_s":"NCBITaxon:4529",
+        "xref_ss":["GC_ID:1",
           "PMID:15654106",
           "PMID:17617555",
-          "PMID:17907810"
-        ],
-        "name": "Oryza rufipogon",
-        "is_a": [
-          4527
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4529,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "common wild rice",
-          "red rice"
-        ]
-      },
+          "PMID:17907810"],
+        "_terms":"NCBITaxon:4529 | Oryza rufipogon",
+        "_genes":39799,
+        "_version_":1504713762526986248},
       {
-        "_id": 4530,
-        "xref": [
-          "GC_ID:1",
+        "id":4530,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:4530",
+        "xref_ss":["GC_ID:1",
           "PMID:15654106",
           "PMID:17617555",
           "PMID:17907810",
-          "PMID:19706531"
-        ],
-        "alt_id": [
-          389215
-        ],
-        "is_a": [
-          4527
-        ],
-        "name": "Oryza sativa",
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4530,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "red rice",
-          "rice"
-        ]
-      },
+          "PMID:19706531"],
+        "is_a_is":[4527],
+        "rank_s":"species",
+        "synonym_ss":["red rice",
+          "rice"],
+        "alt_id_is":[389215],
+        "name_s":"Oryza sativa",
+        "_terms":"NCBITaxon:4530 | Oryza sativa",
+        "_genes":235317,
+        "_version_":1504713762526986249},
       {
-        "_id": 4533,
-        "synonym": [
-          "malo sina"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4533,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "name": "Oryza brachyantha",
-        "is_a": [
-          4527
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":4533,
+        "id_s":"NCBITaxon:4533",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[4527],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Oryza brachyantha",
+        "rank_s":"species",
+        "synonym_ss":["malo sina"],
+        "_terms":"NCBITaxon:4533 | Oryza brachyantha",
+        "_genes":34155,
+        "_version_":1504713762526986250},
       {
-        "_id": 4536,
-        "is_a": [
-          4527
-        ],
-        "name": "Oryza nivara",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4536,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "synonym": [
-          "Oryza nivara S.D.Sharma & Shastry",
+        "id":4536,
+        "is_a_is":[4527],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4536",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Oryza nivara",
+        "synonym_ss":["Oryza nivara S.D.Sharma & Shastry",
           "Oryza nivarra",
           "Oryza sativa f. spontanea",
-          "Oryza sativa f. spontanea Roshev. nom. illeg."
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+          "Oryza sativa f. spontanea Roshev. nom. illeg."],
+        "rank_s":"species",
+        "_terms":"NCBITaxon:4536 | Oryza nivara",
+        "_genes":37985,
+        "_version_":1504713762526986251},
       {
-        "_id": 4537,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4537,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Oryza punctata",
-        "is_a": [
-          4527
-        ],
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:species"
-      },
+        "id":4537,
+        "rank_s":"species",
+        "name_s":"Oryza punctata",
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:4537",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[4527],
+        "_terms":"NCBITaxon:4537 | Oryza punctata",
+        "_genes":36957,
+        "_version_":1504713762526986252},
       {
-        "_id": 4538,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4538,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "African rice",
-          "Oryza glaberrima Steud."
-        ],
-        "xref": [
-          "GC_ID:1",
-          "PMID:17617555"
-        ],
-        "name": "Oryza glaberrima",
-        "is_a": [
-          4527
-        ],
-        "property_value": "has_rank NCBITaxon:species"
-      },
+        "id":4538,
+        "name_s":"Oryza glaberrima",
+        "synonym_ss":["African rice",
+          "Oryza glaberrima Steud."],
+        "rank_s":"species",
+        "xref_ss":["GC_ID:1",
+          "PMID:17617555"],
+        "id_s":"NCBITaxon:4538",
+        "is_a_is":[4527],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4538 | Oryza glaberrima",
+        "_genes":73878,
+        "_version_":1504713762526986253},
       {
-        "_id": 4554,
-        "property_value": "has_rank NCBITaxon:genus",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Setaria <grass>",
-        "is_a": [
-          147428
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Setaria"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4554,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147369,
-          147370,
-          147428,
-          1437183,
-          1437197
-        ]
-      },
+        "id":4554,
+        "name_s":"Setaria <grass>",
+        "synonym_ss":["Setaria"],
+        "rank_s":"genus",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4554",
+        "is_a_is":[147428],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4554 | Setaria <grass>",
+        "_genes":35471,
+        "_version_":1504713762526986254},
       {
-        "_id": 4555,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4554,
-          4555,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147369,
-          147370,
-          147428,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Chaetochloa italica",
+        "id":4555,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[4554],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4555",
+        "synonym_ss":["Chaetochloa italica",
           "foxtail millet",
           "Panicum italicum",
-          "Setaria viridis subsp. italica"
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Setaria italica",
-        "is_a": [
-          4554
-        ],
-        "property_value": "has_rank NCBITaxon:species"
-      },
+          "Setaria viridis subsp. italica"],
+        "rank_s":"species",
+        "name_s":"Setaria italica",
+        "_terms":"NCBITaxon:4555 | Setaria italica",
+        "_genes":35471,
+        "_version_":1504713762526986255},
       {
-        "_id": 4557,
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:genus",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4557,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147369,
-          147370,
-          147429,
-          1437183,
-          1437197
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Sorghum",
-        "is_a": [
-          147429
-        ]
-      },
+        "id":4557,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[147429],
+        "id_s":"NCBITaxon:4557",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"genus",
+        "name_s":"Sorghum",
+        "_terms":"NCBITaxon:4557 | Sorghum",
+        "_genes":34567,
+        "_version_":1504713762526986256},
       {
-        "_id": 4558,
-        "property_value": "has_rank NCBITaxon:species",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Sorghum bicolor",
-        "is_a": [
-          4557
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "broomcorn",
+        "id":4558,
+        "name_s":"Sorghum bicolor",
+        "synonym_ss":["broomcorn",
           "milo",
           "sorghum",
           "Sorghum bicolor milo",
           "Sorghum bicolor subsp. bicolor",
           "Sorghum saccharatum",
-          "Sorghum vulgare"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4557,
-          4558,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147369,
-          147370,
-          147429,
-          1437183,
-          1437197
-        ]
-      },
+          "Sorghum vulgare"],
+        "rank_s":"species",
+        "is_a_is":[4557],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4558",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4558 | Sorghum bicolor",
+        "_genes":34567,
+        "_version_":1504713762526986257},
       {
-        "_id": 4564,
-        "is_a": [
-          147389
-        ],
-        "name": "Triticum",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4564,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147389,
-          359160,
-          1437183,
-          1437197
-        ],
-        "synonym": [
-          "Triticum L."
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":4564,
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4564",
+        "is_a_is":[147389],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Triticum",
+        "synonym_ss":["Triticum L."],
+        "rank_s":"genus",
+        "_terms":"NCBITaxon:4564 | Triticum",
+        "_genes":153382,
+        "_version_":1504713762526986258},
       {
-        "_id": 4565,
-        "synonym": [
-          "bread wheat",
+        "id":4565,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4565",
+        "is_a_is":[4564],
+        "synonym_ss":["bread wheat",
           "Canadian hard winter wheat",
           "common wheat",
           "Tricum aestivum",
@@ -2584,1068 +996,399 @@ module.exports = {
           "Triticum aestivum subsp. aestivum",
           "Triticum aestivum8",
           "Triticum vulgare",
-          "wheat"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4564,
-          4565,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147389,
-          359160,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "is_a": [
-          4564
-        ],
-        "name": "Triticum aestivum",
-        "alt_id": [
-          235075,
-          39424
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+          "wheat"],
+        "rank_s":"species",
+        "alt_id_is":[235075,
+          39424],
+        "name_s":"Triticum aestivum",
+        "_terms":"NCBITaxon:4565 | Triticum aestivum",
+        "_genes":115778,
+        "_version_":1504713762526986259},
       {
-        "_id": 4572,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4564,
-          4572,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147389,
-          359160,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Triticum urartu Tumanian ex Gandilyan"
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Triticum urartu",
-        "is_a": [
-          4564
-        ],
-        "property_value": "has_rank NCBITaxon:species"
-      },
+        "id":4572,
+        "name_s":"Triticum urartu",
+        "synonym_ss":["Triticum urartu Tumanian ex Gandilyan"],
+        "rank_s":"species",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4572",
+        "is_a_is":[4564],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4572 | Triticum urartu",
+        "_genes":37604,
+        "_version_":1504713762526986260},
       {
-        "_id": 4575,
-        "property_value": "has_rank NCBITaxon:genus",
-        "is_a": [
-          147429
-        ],
-        "name": "Zea",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "synonym": [
-          "Euchlaena"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4575,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147369,
-          147370,
-          147429,
-          1437183,
-          1437197
-        ]
-      },
+        "id":4575,
+        "name_s":"Zea",
+        "rank_s":"genus",
+        "synonym_ss":["Euchlaena"],
+        "id_s":"NCBITaxon:4575",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[147429],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4575 | Zea",
+        "_genes":110301,
+        "_version_":1504713762526986261},
       {
-        "_id": 4577,
-        "is_a": [
-          4575
-        ],
-        "name": "Zea mays",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          4578
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4575,
-          4577,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147369,
-          147370,
-          147429,
-          1437183,
-          1437197
-        ],
-        "synonym": [
-          "maize",
+        "id":4577,
+        "name_s":"Zea mays",
+        "alt_id_is":[4578],
+        "rank_s":"species",
+        "synonym_ss":["maize",
           "Zea mays mays",
-          "Zea mays var. japonica"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+          "Zea mays var. japonica"],
+        "is_a_is":[4575],
+        "id_s":"NCBITaxon:4577",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4577 | Zea mays",
+        "_genes":110301,
+        "_version_":1504713762526986262},
       {
-        "_id": 13792,
-        "property_value": "has_rank NCBITaxon:order",
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          1035538
-        ],
-        "name": "Mamiellales",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          13792,
-          33090,
-          131567,
-          1035538
-        ]
-      },
+        "id":4618,
+        "name_s":"Zingiberales",
+        "alt_id_is":[40513],
+        "rank_s":"order",
+        "synonym_ss":["Scitamineae",
+          "Zingiberiflorae"],
+        "is_a_is":[4734],
+        "id_s":"NCBITaxon:4618",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:4618 | Zingiberales",
+        "_genes":37579,
+        "_version_":1504713762526986263},
       {
-        "_id": 4618,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4618,
-          4734,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Scitamineae",
-          "Zingiberiflorae"
-        ],
-        "alt_id": [
-          40513
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Zingiberales",
-        "is_a": [
-          4734
-        ],
-        "property_value": "has_rank NCBITaxon:order"
-      },
+        "id":4637,
+        "is_a_is":[4618],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4637",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Musaceae",
+        "synonym_ss":["banana family"],
+        "rank_s":"family",
+        "_terms":"NCBITaxon:4637 | Musaceae",
+        "_genes":37579,
+        "_version_":1504713762526986264},
       {
-        "_id": 4637,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "banana family"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4618,
-          4637,
-          4734,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:family",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          4618
-        ],
-        "name": "Musaceae"
-      },
+        "id":4640,
+        "rank_s":"genus",
+        "name_s":"Musa",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[4637],
+        "id_s":"NCBITaxon:4640",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:4640 | Musa",
+        "_genes":37579,
+        "_version_":1504713762526986265},
       {
-        "_id": 4640,
-        "property_value": "has_rank NCBITaxon:genus",
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          4637
-        ],
-        "name": "Musa",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4618,
-          4637,
-          4640,
-          4734,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183,
-          1437197
-        ]
-      },
-      {
-        "_id": 4641,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4618,
-          4637,
-          4640,
-          4641,
-          4734,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "banana",
+        "id":4641,
+        "synonym_ss":["banana",
           "dessert bananas",
           "dwarf banana",
           "Musa AA Group",
           "Musa accumunata",
           "Musa acuminata AA Group",
           "Musa nana",
-          "sweet banana"
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          214695
-        ],
-        "is_a": [
-          4640
-        ],
-        "name": "Musa acuminata",
-        "property_value": "has_rank NCBITaxon:species"
-      },
+          "sweet banana"],
+        "rank_s":"species",
+        "name_s":"Musa acuminata",
+        "alt_id_is":[214695],
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[4640],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4641",
+        "_terms":"NCBITaxon:4641 | Musa acuminata",
+        "_genes":37579,
+        "_version_":1504713762526986266},
       {
-        "_id": 4734,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4734,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Commelinidae",
-          "Commeliniflorae"
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          1437197
-        ],
-        "name": "commelinids",
-        "property_value": "has_rank NCBITaxon:subclass"
-      },
+        "id":4734,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:4734",
+        "is_a_is":[1437197],
+        "synonym_ss":["Commelinidae",
+          "Commeliniflorae"],
+        "rank_s":"subclass",
+        "name_s":"commelinids",
+        "_terms":"NCBITaxon:4734 | commelinids",
+        "_genes":1055502,
+        "_version_":1504713762526986267},
       {
-        "_id": 13332,
-        "property_value": "has_rank NCBITaxon:genus",
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          22097
-        ],
-        "name": "Amborella",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          13332,
-          22097,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          232365,
-          261009
-        ]
-      },
+        "id":13332,
+        "name_s":"Amborella",
+        "rank_s":"genus",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:13332",
+        "is_a_is":[22097],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:13332 | Amborella",
+        "_genes":28721,
+        "_version_":1504713762526986268},
       {
-        "_id": 13333,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          13332,
-          13333,
-          22097,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          232365,
-          261009
-        ],
-        "is_a": [
-          13332
-        ],
-        "name": "Amborella trichopoda",
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:species"
-      },
+        "id":13333,
+        "is_a_is":[13332],
+        "id_s":"NCBITaxon:13333",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Amborella trichopoda",
+        "rank_s":"species",
+        "_terms":"NCBITaxon:13333 | Amborella trichopoda",
+        "_genes":28721,
+        "_version_":1504713762528034816},
       {
-        "_id": 15367,
-        "property_value": "has_rank NCBITaxon:genus",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Brachypodium",
-        "is_a": [
-          147385
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "false bromes"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          15367,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147385,
-          359160,
-          1437183,
-          1437197
-        ]
-      },
+        "id":13792,
+        "is_a_is":[1035538],
+        "id_s":"NCBITaxon:13792",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Mamiellales",
+        "rank_s":"order",
+        "_terms":"NCBITaxon:13792 | Mamiellales",
+        "_genes":7640,
+        "_version_":1504713762528034817},
       {
-        "_id": 15368,
-        "is_a": [
-          15367
-        ],
-        "name": "Brachypodium distachyon",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          15367,
-          15368,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147385,
-          359160,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":15367,
+        "synonym_ss":["false bromes"],
+        "rank_s":"genus",
+        "name_s":"Brachypodium",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[147385],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:15367",
+        "_terms":"NCBITaxon:15367 | Brachypodium",
+        "_genes":26552,
+        "_version_":1504713762528034818},
       {
-        "_id": 22097,
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:family",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          22097,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          232365,
-          261009
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Amborellaceae",
-        "is_a": [
-          261009
-        ]
-      },
+        "id":15368,
+        "is_a_is":[15367],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:15368",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Brachypodium distachyon",
+        "rank_s":"species",
+        "_terms":"NCBITaxon:15368 | Brachypodium distachyon",
+        "_genes":26552,
+        "_version_":1504713762528034819},
       {
-        "_id": 29760,
-        "synonym": [
-          "Vitis vinifera subsp. vinifera",
-          "wine grape"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3602,
-          3603,
-          29760,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91834,
-          131221,
-          131567,
-          403667,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "name": "Vitis vinifera",
-        "is_a": [
-          3603
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":22097,
+        "name_s":"Amborellaceae",
+        "rank_s":"family",
+        "id_s":"NCBITaxon:22097",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[261009],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:22097 | Amborellaceae",
+        "_genes":28721,
+        "_version_":1504713762528034820},
       {
-        "_id": 33090,
-        "property_value": "has_rank NCBITaxon:kingdom",
-        "is_a": [
-          2759
-        ],
-        "name": "Viridiplantae",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "synonym": [
-          "Chlorobionta",
+        "id":29760,
+        "is_a_is":[3603],
+        "id_s":"NCBITaxon:29760",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Vitis vinifera",
+        "rank_s":"species",
+        "synonym_ss":["Vitis vinifera subsp. vinifera",
+          "wine grape"],
+        "_terms":"NCBITaxon:29760 | Vitis vinifera",
+        "_genes":29971,
+        "_version_":1504713762528034821},
+      {
+        "id":33090,
+        "name_s":"Viridiplantae",
+        "rank_s":"kingdom",
+        "synonym_ss":["Chlorobionta",
           "Chlorophyta/Embryophyta group",
           "chlorophyte/embryophyte group",
           "green plants",
-          "green plants"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          33090,
-          131567
-        ]
-      },
+          "green plants"],
+        "is_a_is":[2759],
+        "id_s":"NCBITaxon:33090",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:33090 | Viridiplantae",
+        "_genes":1661869,
+        "_version_":1504713762528034822},
       {
-        "_id": 35493,
-        "property_value": "has_rank NCBITaxon:phylum",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Streptophyta",
-        "is_a": [
-          33090
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Streptophyta Bremer 1985"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          33090,
-          35493,
-          131567
-        ]
-      },
+        "id":35493,
+        "id_s":"NCBITaxon:35493",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[33090],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Streptophyta",
+        "rank_s":"phylum",
+        "synonym_ss":["Streptophyta Bremer 1985"],
+        "_terms":"NCBITaxon:35493 | Streptophyta",
+        "_genes":1639742,
+        "_version_":1504713762528034823},
       {
-        "_id": 35711,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          35711,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "cutgrass",
-          "white grass"
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Leersia",
-        "is_a": [
-          147380
-        ],
-        "property_value": "has_rank NCBITaxon:genus"
-      },
+        "id":35711,
+        "synonym_ss":["cutgrass",
+          "white grass"],
+        "rank_s":"genus",
+        "name_s":"Leersia",
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:35711",
+        "is_a_is":[147380],
+        "_terms":"NCBITaxon:35711 | Leersia",
+        "_genes":30615,
+        "_version_":1504713762528034824},
       {
-        "_id": 37682,
-        "alt_id": [
-          40669,
-          4482,
-          70688
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          4480
-        ],
-        "name": "Aegilops tauschii",
-        "property_value": "has_rank NCBITaxon:species",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4480,
-          4734,
-          33090,
-          35493,
-          37682,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147389,
-          359160,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Aegilops squarrosa",
+        "id":37682,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:37682",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[4480],
+        "rank_s":"species",
+        "synonym_ss":["Aegilops squarrosa",
           "Aegilops squarrosa auct., non L.",
           "Aegilops squarrosa subsp. squarrosa",
           "Patropyrum tauschii",
           "Patropyrum tauschii subsp. tauschii",
           "Triticum aegilops",
-          "Triticum tauschii"
-        ]
-      },
+          "Triticum tauschii"],
+        "alt_id_is":[40669,
+          4482,
+          70688],
+        "name_s":"Aegilops tauschii",
+        "_terms":"NCBITaxon:37682 | Aegilops tauschii",
+        "_genes":37035,
+        "_version_":1504713762528034825},
       {
-        "_id": 38820,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          4478,
-          4727
-        ],
-        "is_a": [
-          4734
-        ],
-        "name": "Poales",
-        "property_value": "has_rank NCBITaxon:order",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":38820,
+        "id_s":"NCBITaxon:38820",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[4734],
+        "namespace_s":"ncbi_taxonomy",
+        "alt_id_is":[4478,
+          4727],
+        "name_s":"Poales",
+        "rank_s":"order",
+        "_terms":"NCBITaxon:38820 | Poales",
+        "_genes":1017923,
+        "_version_":1504713762528034826},
       {
-        "_id": 39946,
-        "xref": [
-          "GC_ID:1",
+        "id":39946,
+        "is_a_is":[4530],
+        "xref_ss":["GC_ID:1",
           "PMID:15654106",
           "PMID:17617555",
           "PMID:17907810",
-          "PMID:19706531"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4530,
-          4734,
-          33090,
-          35493,
-          38820,
-          39946,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "is_a": [
-          4530
-        ],
-        "name": "Oryza sativa Indica Group",
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Indian rice",
+          "PMID:19706531"],
+        "id_s":"NCBITaxon:39946",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Oryza sativa Indica Group",
+        "synonym_ss":["Indian rice",
           "Indica rice",
           "long-grained rice",
           "Oryza sativa (indica cultivar-group)",
           "Oryza sativa (indica group)",
           "Oryza sativa indica",
-          "Oryza sativa subsp. indica"
-        ]
-      },
+          "Oryza sativa subsp. indica"],
+        "_terms":"NCBITaxon:39946 | Oryza sativa Indica Group",
+        "_genes":88438,
+        "_version_":1504713762528034827},
       {
-        "_id": 39947,
-        "is_a": [
-          4530
-        ],
-        "name": "Oryza sativa Japonica Group",
-        "xref": [
-          "GC_ID:1",
-          "PMID:15654106",
-          "PMID:17617555",
-          "PMID:17907810",
-          "PMID:19706531"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4530,
-          4734,
-          33090,
-          35493,
-          38820,
-          39947,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "synonym": [
-          "Japanese rice",
+        "id":39947,
+        "name_s":"Oryza sativa Japonica Group",
+        "synonym_ss":["Japanese rice",
           "Japonica rice",
           "Oryza sativa (japonica culticar-group)",
           "Oryza sativa (japonica cultivar-group)",
           "Oryza sativa japonica",
-          "Oryza sativa subsp. japonica"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+          "Oryza sativa subsp. japonica"],
+        "xref_ss":["GC_ID:1",
+          "PMID:15654106",
+          "PMID:17617555",
+          "PMID:17907810",
+          "PMID:19706531"],
+        "id_s":"NCBITaxon:39947",
+        "is_a_is":[4530],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:39947 | Oryza sativa Japonica Group",
+        "_genes":146879,
+        "_version_":1504713762528034828},
       {
-        "_id": 40148,
-        "property_value": "has_rank NCBITaxon:species",
-        "is_a": [
-          4527
-        ],
-        "name": "Oryza glumipatula",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "synonym": [
-          "Oryza glumaepatula"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4734,
-          33090,
-          35493,
-          38820,
-          40148,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ]
-      },
+        "id":40148,
+        "synonym_ss":["Oryza glumaepatula"],
+        "rank_s":"species",
+        "name_s":"Oryza glumipatula",
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:40148",
+        "is_a_is":[4527],
+        "_terms":"NCBITaxon:40148 | Oryza glumipatula",
+        "_genes":39018,
+        "_version_":1504713762528034829},
       {
-        "_id": 40149,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Oryza meridionales"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4734,
-          33090,
-          35493,
-          38820,
-          40149,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          4527
-        ],
-        "name": "Oryza meridionalis"
-      },
+        "id":40149,
+        "synonym_ss":["Oryza meridionales"],
+        "rank_s":"species",
+        "name_s":"Oryza meridionalis",
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:40149",
+        "is_a_is":[4527],
+        "_terms":"NCBITaxon:40149 | Oryza meridionalis",
+        "_genes":0,
+        "_version_":1504713762528034830},
       {
-        "_id": 41938,
-        "property_value": "has_rank NCBITaxon:order",
-        "name": "Malvales",
-        "is_a": [
-          91836
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          3628
-        ],
-        "synonym": [
-          "Malvanae"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          41938,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ]
-      },
+        "id":41938,
+        "name_s":"Malvales",
+        "alt_id_is":[3628],
+        "synonym_ss":["Malvanae"],
+        "rank_s":"order",
+        "is_a_is":[91836],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:41938",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:41938 | Malvales",
+        "_genes":29188,
+        "_version_":1504713762528034831},
       {
-        "_id": 45156,
-        "name": "Cyanidioschyzon",
-        "is_a": [
-          265316
-        ],
-        "ancestors": [
-          1,
-          2759,
-          2763,
-          2797,
-          45156,
-          131567,
-          265316,
-          265318
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":45156,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[265316],
+        "id_s":"NCBITaxon:45156",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"genus",
+        "name_s":"Cyanidioschyzon",
+        "_terms":"NCBITaxon:45156 | Cyanidioschyzon",
+        "_genes":5106,
+        "_version_":1504713762528034832},
       {
-        "_id": 45157,
-        "name": "Cyanidioschyzon merolae",
-        "is_a": [
-          45156
-        ],
-        "ancestors": [
-          1,
-          2759,
-          2763,
-          2797,
-          45156,
-          45157,
-          131567,
-          265316,
-          265318
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":45157,
+        "is_a_is":[45156],
+        "id_s":"NCBITaxon:45157",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Cyanidioschyzon merolae",
+        "rank_s":"species",
+        "_terms":"NCBITaxon:45157 | Cyanidioschyzon merolae",
+        "_genes":5106,
+        "_version_":1504713762528034833},
       {
-        "_id": 49274,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Lycopersicon",
-        "is_a": [
-          4107
-        ],
-        "property_value": "has_rank NCBITaxon:subgenus",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4069,
-          4070,
-          4107,
-          33090,
-          35493,
-          49274,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          91888,
-          131221,
-          131567,
-          424551,
-          424574,
-          1437183,
-          1437201
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Lycopersicon (Mill.) Seithe",
-          "Lycopersicum"
-        ]
-      },
+        "id":49274,
+        "name_s":"Lycopersicon",
+        "synonym_ss":["Lycopersicon (Mill.) Seithe",
+          "Lycopersicum"],
+        "rank_s":"subgenus",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:49274",
+        "is_a_is":[4107],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:49274 | Lycopersicon",
+        "_genes":38762,
+        "_version_":1504713762528034834},
       {
-        "_id": 51351,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          3705,
-          3711,
-          33090,
-          35493,
-          51351,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          981071,
-          1437183,
-          1437201
-        ],
-        "synonym": [
-          "bai cai",
+        "id":51351,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:51351",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[3711],
+        "rank_s":"subspecies",
+        "synonym_ss":["bai cai",
           "Brassica campestris (Pekinensis Group)",
           "Brassica campestris ssp. pekinensis",
           "Brassica campestris subsp. pekinensis",
@@ -3656,1856 +1399,683 @@ module.exports = {
           "Brassica rapa var. glabra",
           "celery cabbage",
           "Chinese cabbage",
-          "pe-tsai"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "name": "Brassica rapa subsp. pekinensis",
-        "is_a": [
-          3711
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:subspecies"
-      },
+          "pe-tsai"],
+        "name_s":"Brassica rapa subsp. pekinensis",
+        "_terms":"NCBITaxon:51351 | Brassica rapa subsp. pekinensis",
+        "_genes":42846,
+        "_version_":1504713762528034835},
       {
-        "_id": 58023,
-        "is_a": [
-          3193
-        ],
-        "name": "Tracheophyta",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          33090,
-          35493,
-          58023,
-          131221,
-          131567
-        ],
-        "synonym": [
-          "vascular plants",
-          "vascular plants"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":58023,
+        "synonym_ss":["vascular plants",
+          "vascular plants"],
+        "name_s":"Tracheophyta",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3193],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:58023",
+        "_terms":"NCBITaxon:58023 | Tracheophyta",
+        "_genes":1607469,
+        "_version_":1504713762528034836},
       {
-        "_id": 58024,
-        "is_a": [
-          78536
-        ],
-        "name": "Spermatophyta",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567
-        ],
-        "synonym": [
-          "seed plants",
-          "seed plants"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":58024,
+        "name_s":"Spermatophyta",
+        "synonym_ss":["seed plants",
+          "seed plants"],
+        "is_a_is":[78536],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:58024",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:58024 | Spermatophyta",
+        "_genes":1572581,
+        "_version_":1504713762528034837},
       {
-        "_id": 59689,
-        "property_value": "has_rank NCBITaxon:species",
-        "name": "Arabidopsis lyrata",
-        "is_a": [
-          3701
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          63679
-        ],
-        "synonym": [
-          "Arabidopsis lyrata (L.) O'Kane & Al-Shehbaz",
-          "lyrate rockcress"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          3701,
-          33090,
-          35493,
-          58023,
-          58024,
-          59689,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          980083,
-          1437183,
-          1437201
-        ]
-      },
+        "id":59689,
+        "is_a_is":[3701],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:59689",
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Arabidopsis lyrata",
+        "alt_id_is":[63679],
+        "synonym_ss":["Arabidopsis lyrata (L.) O'Kane & Al-Shehbaz",
+          "lyrate rockcress"],
+        "rank_s":"species",
+        "_terms":"NCBITaxon:59689 | Arabidopsis lyrata",
+        "_genes":32667,
+        "_version_":1504713762528034838},
       {
-        "_id": 65489,
-        "synonym": [
-          "African wild rice",
+        "id":65489,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[4527],
+        "id_s":"NCBITaxon:65489",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"species",
+        "synonym_ss":["African wild rice",
           "Oryza barthii A.Chev.",
-          "Oryza breviligulata"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4527,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          65489,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:species",
-        "name": "Oryza barthii",
-        "is_a": [
-          4527
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+          "Oryza breviligulata"],
+        "name_s":"Oryza barthii",
+        "_terms":"NCBITaxon:65489 | Oryza barthii",
+        "_genes":36899,
+        "_version_":1504713762528034839},
       {
-        "_id": 70447,
-        "is_a": [
-          13792
-        ],
-        "name": "Ostreococcus",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          13792,
-          33090,
-          70447,
-          131567,
-          1035538
-        ],
-        "property_value": "has_rank NCBITaxon:genus",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":70447,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:70447",
+        "is_a_is":[13792],
+        "rank_s":"genus",
+        "name_s":"Ostreococcus",
+        "_terms":"NCBITaxon:70447 | Ostreococcus",
+        "_genes":7640,
+        "_version_":1504713762529083392},
       {
-        "_id": 71240,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          3399
-        ],
-        "is_a": [
-          1437183
-        ],
-        "name": "eudicotyledons",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          78536,
-          131221,
-          131567,
-          1437183
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "dicots",
+        "id":71240,
+        "synonym_ss":["dicots",
           "Dicotyledoneae",
           "dicotyledons",
           "eudicots",
-          "Magnoliopsida"
-        ]
-      },
+          "Magnoliopsida"],
+        "name_s":"eudicotyledons",
+        "alt_id_is":[3399],
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[1437183],
+        "id_s":"NCBITaxon:71240",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:71240 | eudicotyledons",
+        "_genes":488358,
+        "_version_":1504713762529083393},
       {
-        "_id": 71274,
-        "synonym": [
-          "Asteridae"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:subclass",
-        "name": "asterids",
-        "is_a": [
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":71274,
+        "rank_s":"subclass",
+        "synonym_ss":["Asteridae"],
+        "name_s":"asterids",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[1437201],
+        "id_s":"NCBITaxon:71274",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:71274 | asterids",
+        "_genes":81736,
+        "_version_":1504713762529083394},
       {
-        "_id": 71275,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "synonym": [
-          "Rosidae"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          1437201
-        ],
-        "name": "rosids",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:subclass"
-      },
+        "id":71275,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[1437201],
+        "id_s":"NCBITaxon:71275",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"subclass",
+        "synonym_ss":["Rosidae"],
+        "name_s":"rosids",
+        "_terms":"NCBITaxon:71275 | rosids",
+        "_genes":406622,
+        "_version_":1504713762529083395},
       {
-        "_id": 72025,
-        "property_value": "has_rank NCBITaxon:order",
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          91835
-        ],
-        "name": "Fabales",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ]
-      },
+        "id":72025,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:72025",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[91835],
+        "rank_s":"order",
+        "name_s":"Fabales",
+        "_terms":"NCBITaxon:72025 | Fabales",
+        "_genes":108247,
+        "_version_":1504713762529083396},
       {
-        "_id": 77586,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          35711,
-          38820,
-          58023,
-          58024,
-          77586,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "is_a": [
-          35711
-        ],
-        "name": "Leersia perrieri",
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:species"
-      },
+        "id":77586,
+        "rank_s":"species",
+        "name_s":"Leersia perrieri",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[35711],
+        "id_s":"NCBITaxon:77586",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:77586 | Leersia perrieri",
+        "_genes":30615,
+        "_version_":1504713762529083397},
       {
-        "_id": 78536,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          33090,
-          35493,
-          58023,
-          78536,
-          131221,
-          131567
-        ],
-        "is_a": [
-          58023
-        ],
-        "name": "Euphyllophyta",
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "euphyllophytes"
-        ]
-      },
+        "id":78536,
+        "name_s":"Euphyllophyta",
+        "synonym_ss":["euphyllophytes"],
+        "is_a_is":[58023],
+        "id_s":"NCBITaxon:78536",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:78536 | Euphyllophyta",
+        "_genes":1572581,
+        "_version_":1504713762529083398},
       {
-        "_id": 81972,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          3701,
-          33090,
-          35493,
-          58023,
-          58024,
-          59689,
-          71240,
-          71275,
-          78536,
-          81972,
-          91827,
-          91836,
-          131221,
-          131567,
-          980083,
-          1437183,
-          1437201
-        ],
-        "synonym": [
-          "Arabis lyrata",
+        "id":81972,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[59689],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:81972",
+        "synonym_ss":["Arabis lyrata",
           "Arabis lyrata subsp. lyrata",
-          "Cardaminopsis lyrata"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "name": "Arabidopsis lyrata subsp. lyrata",
-        "is_a": [
-          59689
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:subspecies"
-      },
+          "Cardaminopsis lyrata"],
+        "rank_s":"subspecies",
+        "name_s":"Arabidopsis lyrata subsp. lyrata",
+        "_terms":"NCBITaxon:81972 | Arabidopsis lyrata subsp. lyrata",
+        "_genes":32667,
+        "_version_":1504713762529083399},
       {
-        "_id": 88036,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3242,
-          3243,
-          3244,
-          3245,
-          3246,
-          33090,
-          35493,
-          58023,
-          88036,
-          131221,
-          131567
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Selaginella moellendorfii"
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Selaginella moellendorffii",
-        "is_a": [
-          3246
-        ],
-        "property_value": "has_rank NCBITaxon:species"
-      },
+        "id":88036,
+        "rank_s":"species",
+        "synonym_ss":["Selaginella moellendorfii"],
+        "name_s":"Selaginella moellendorffii",
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:88036",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[3246],
+        "_terms":"NCBITaxon:88036 | Selaginella moellendorffii",
+        "_genes":34888,
+        "_version_":1504713762529083400},
       {
-        "_id": 91827,
-        "is_a": [
-          71240
-        ],
-        "name": "Gunneridae",
-        "alt_id": [
-          1437200
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "synonym": [
-          "core eudicots",
-          "core eudicotyledons"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          78536,
-          91827,
-          131221,
-          131567,
-          1437183
-        ]
-      },
+        "id":91827,
+        "name_s":"Gunneridae",
+        "alt_id_is":[1437200],
+        "synonym_ss":["core eudicots",
+          "core eudicotyledons"],
+        "is_a_is":[71240],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:91827",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:91827 | Gunneridae",
+        "_genes":488358,
+        "_version_":1504713762529083401},
       {
-        "_id": 91834,
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          71275
-        ],
-        "name": "rosids incertae sedis",
-        "alt_id": [
-          72024
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91834,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ]
-      },
+        "id":91834,
+        "name_s":"rosids incertae sedis",
+        "alt_id_is":[72024],
+        "is_a_is":[71275],
+        "id_s":"NCBITaxon:91834",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:91834 | rosids incertae sedis",
+        "_genes":29971,
+        "_version_":1504713762529083402},
       {
-        "_id": 91835,
-        "alt_id": [
-          41939,
-          4293
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "fabids",
-        "is_a": [
-          71275
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "eurosids I"
-        ]
-      },
+        "id":91835,
+        "name_s":"fabids",
+        "alt_id_is":[41939,
+          4293],
+        "synonym_ss":["eurosids I"],
+        "is_a_is":[71275],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:91835",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:91835 | fabids",
+        "_genes":179123,
+        "_version_":1504713762529083403},
       {
-        "_id": 91836,
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          71275
-        ],
-        "name": "malvids",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ]
-      },
+        "id":91836,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:91836",
+        "is_a_is":[71275],
+        "name_s":"malvids",
+        "_terms":"NCBITaxon:91836 | malvids",
+        "_genes":197528,
+        "_version_":1504713762529083404},
       {
-        "_id": 91888,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          91888,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "euasterids I"
-        ],
-        "alt_id": [
-          41935
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "lamiids",
-        "is_a": [
-          71274
-        ]
-      },
+        "id":91888,
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:91888",
+        "is_a_is":[71274],
+        "namespace_s":"ncbi_taxonomy",
+        "alt_id_is":[41935],
+        "name_s":"lamiids",
+        "synonym_ss":["euasterids I"],
+        "_terms":"NCBITaxon:91888 | lamiids",
+        "_genes":81736,
+        "_version_":1504713762529083405},
       {
-        "_id": 109376,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          3705,
-          3712,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          109376,
-          131221,
-          131567,
-          981071,
-          1437183,
-          1437201
-        ],
-        "synonym": [
-          "Brassica oleracea subsp. oleracea"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "name": "Brassica oleracea var. oleracea",
-        "is_a": [
-          3712
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:varietas"
-      },
+        "id":109376,
+        "name_s":"Brassica oleracea var. oleracea",
+        "rank_s":"varietas",
+        "synonym_ss":["Brassica oleracea subsp. oleracea"],
+        "id_s":"NCBITaxon:109376",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[3712],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:109376 | Brassica oleracea var. oleracea",
+        "_genes":59225,
+        "_version_":1504713762529083406},
       {
-        "_id": 112509,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          4514
-        ],
-        "name": "Hordeum vulgare subsp. vulgare",
-        "is_a": [
-          4513
-        ],
-        "property_value": "has_rank NCBITaxon:subspecies",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4512,
-          4513,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          112509,
-          131221,
-          131567,
-          147368,
-          147389,
-          359160,
-          1437183,
-          1437197
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "barley",
+        "id":112509,
+        "alt_id_is":[4514],
+        "name_s":"Hordeum vulgare subsp. vulgare",
+        "synonym_ss":["barley",
           "domesticated barley",
           "Hordeum sativum",
           "Hordeum vulgare var. nudum",
           "Hordeum vulgare var. vulgare",
-          "two-rowed barley"
-        ]
-      },
+          "two-rowed barley"],
+        "rank_s":"subspecies",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:112509",
+        "is_a_is":[4513],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:112509 | Hordeum vulgare subsp. vulgare",
+        "_genes":26067,
+        "_version_":1504713762529083407},
       {
-        "_id": 114656,
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:subclass",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3208,
-          3214,
-          33090,
-          35493,
-          114656,
-          131221,
-          131567,
-          404260
-        ],
-        "is_a": [
-          3214
-        ],
-        "name": "Funariidae"
-      },
+        "id":114656,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3214],
+        "id_s":"NCBITaxon:114656",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"subclass",
+        "name_s":"Funariidae",
+        "_terms":"NCBITaxon:114656 | Funariidae",
+        "_genes":32273,
+        "_version_":1504713762529083408},
       {
-        "_id": 131221,
-        "ancestors": [
-          1,
-          2759,
-          33090,
-          35493,
-          131221,
-          131567
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Streptophytina",
-        "is_a": [
-          35493
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Charophyta/Embryophyta group",
-          "charophyte/embryophyte group"
-        ]
-      },
+        "id":131221,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:131221",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[35493],
+        "synonym_ss":["Charophyta/Embryophyta group",
+          "charophyte/embryophyte group"],
+        "name_s":"Streptophytina",
+        "_terms":"NCBITaxon:131221 | Streptophytina",
+        "_genes":1639742,
+        "_version_":1504713762529083409},
       {
-        "_id": 131567,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "biota"
-        ],
-        "ancestors": [
-          1,
-          131567
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "cellular organisms",
-        "is_a": [
-          1
-        ]
-      },
+        "id":131567,
+        "name_s":"cellular organisms",
+        "synonym_ss":["biota"],
+        "is_a_is":[1],
+        "id_s":"NCBITaxon:131567",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:131567 | cellular organisms",
+        "_genes":1666975,
+        "_version_":1504713762529083410},
       {
-        "_id": 147367,
-        "is_a": [
-          359160
-        ],
-        "name": "Ehrhartoideae",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          359160,
-          1437183,
-          1437197
-        ],
-        "property_value": "has_rank NCBITaxon:subfamily",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":147367,
+        "rank_s":"subfamily",
+        "name_s":"Ehrhartoideae",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[359160],
+        "id_s":"NCBITaxon:147367",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:147367 | Ehrhartoideae",
+        "_genes":594548,
+        "_version_":1504713762529083411},
       {
-        "_id": 147368,
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:subfamily",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          359160,
-          1437183,
-          1437197
-        ],
-        "is_a": [
-          359160
-        ],
-        "name": "Pooideae"
-      },
+        "id":147368,
+        "rank_s":"subfamily",
+        "name_s":"Pooideae",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[359160],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:147368",
+        "_terms":"NCBITaxon:147368 | Pooideae",
+        "_genes":243036,
+        "_version_":1504713762529083412},
       {
-        "_id": 147369,
-        "property_value": "has_rank NCBITaxon:subfamily",
-        "name": "Panicoideae",
-        "is_a": [
-          147370
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          219388
-        ],
-        "synonym": [
-          "Centothecoideae"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147369,
-          147370,
-          1437183,
-          1437197
-        ]
-      },
+        "id":147369,
+        "name_s":"Panicoideae",
+        "alt_id_is":[219388],
+        "rank_s":"subfamily",
+        "synonym_ss":["Centothecoideae"],
+        "is_a_is":[147370],
+        "id_s":"NCBITaxon:147369",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:147369 | Panicoideae",
+        "_genes":180339,
+        "_version_":1504713762529083413},
       {
-        "_id": 147370,
-        "name": "PACMAD clade",
-        "is_a": [
-          4479
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147370,
-          1437183,
-          1437197
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":147370,
+        "is_a_is":[4479],
+        "name_s":"PACMAD clade",
+        "id_s":"NCBITaxon:147370",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:147370 | PACMAD clade",
+        "_genes":180339,
+        "_version_":1504713762529083414},
       {
-        "_id": 147380,
-        "name": "Oryzeae",
-        "is_a": [
-          147367
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147367,
-          147380,
-          359160,
-          1437183,
-          1437197
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:tribe",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":147380,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:147380",
+        "is_a_is":[147367],
+        "rank_s":"tribe",
+        "name_s":"Oryzeae",
+        "_terms":"NCBITaxon:147380 | Oryzeae",
+        "_genes":594548,
+        "_version_":1504713762529083415},
       {
-        "_id": 147385,
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147385,
-          359160,
-          1437183,
-          1437197
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Brachypodieae",
-        "is_a": [
-          147368
-        ],
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:tribe"
-      },
+        "id":147385,
+        "name_s":"Brachypodieae",
+        "rank_s":"tribe",
+        "is_a_is":[147368],
+        "id_s":"NCBITaxon:147385",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:147385 | Brachypodieae",
+        "_genes":26552,
+        "_version_":1504713762530131968},
       {
-        "_id": 147389,
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:tribe",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147368,
-          147389,
-          359160,
-          1437183,
-          1437197
-        ],
-        "is_a": [
-          147368
-        ],
-        "name": "Triticeae"
-      },
+        "id":147389,
+        "name_s":"Triticeae",
+        "rank_s":"tribe",
+        "id_s":"NCBITaxon:147389",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[147368],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:147389 | Triticeae",
+        "_genes":216484,
+        "_version_":1504713762530131969},
       {
-        "_id": 147428,
-        "name": "Paniceae",
-        "is_a": [
-          147369
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147369,
-          147370,
-          147428,
-          1437183,
-          1437197
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:tribe",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":147428,
+        "rank_s":"tribe",
+        "name_s":"Paniceae",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[147369],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:147428",
+        "_terms":"NCBITaxon:147428 | Paniceae",
+        "_genes":35471,
+        "_version_":1504713762530131970},
       {
-        "_id": 147429,
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:tribe",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          147369,
-          147370,
-          147429,
-          1437183,
-          1437197
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Andropogoneae",
-        "is_a": [
-          147369
-        ]
-      },
+        "id":147429,
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:147429",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[147369],
+        "rank_s":"tribe",
+        "name_s":"Andropogoneae",
+        "_terms":"NCBITaxon:147429 | Andropogoneae",
+        "_genes":144868,
+        "_version_":1504713762530131971},
       {
-        "_id": 163735,
-        "property_value": "has_rank NCBITaxon:tribe",
-        "namespace": "ncbi_taxonomy",
-        "name": "Phaseoleae",
-        "is_a": [
-          3814
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3803,
-          3814,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          163735,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":163735,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3814],
+        "id_s":"NCBITaxon:163735",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"tribe",
+        "name_s":"Phaseoleae",
+        "_terms":"NCBITaxon:163735 | Phaseoleae",
+        "_genes":54174,
+        "_version_":1504713762530131972},
       {
-        "_id": 163742,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3803,
-          3814,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          163742,
-          1437183,
-          1437201
-        ],
-        "is_a": [
-          3814
-        ],
-        "name": "Trifolieae",
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:tribe"
-      },
+        "id":163742,
+        "rank_s":"tribe",
+        "name_s":"Trifolieae",
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:163742",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[3814],
+        "_terms":"NCBITaxon:163742 | Trifolieae",
+        "_genes":54073,
+        "_version_":1504713762530131973},
       {
-        "_id": 171637,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Amygdaloideae",
-          "Spiraeoideae"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3744,
-          3745,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          171637,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:subfamily",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "alt_id": [
-          171636,
-          721786
-        ],
-        "is_a": [
-          3745
-        ],
-        "name": "Maloideae"
-      },
+        "id":171637,
+        "name_s":"Maloideae",
+        "alt_id_is":[171636,
+          721786],
+        "synonym_ss":["Amygdaloideae",
+          "Spiraeoideae"],
+        "rank_s":"subfamily",
+        "is_a_is":[3745],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:171637",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:171637 | Maloideae",
+        "_genes":29499,
+        "_version_":1504713762530131974},
       {
-        "_id": 214687,
-        "property_value": "has_rank NCBITaxon:subspecies",
-        "is_a": [
-          4641
-        ],
-        "name": "Musa acuminata subsp. malaccensis",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "synonym": [
-          "Musa acuminata subsp. malaccensis (Ridl.) N.W.Simmonds",
+        "id":214687,
+        "name_s":"Musa acuminata subsp. malaccensis",
+        "synonym_ss":["Musa acuminata subsp. malaccensis (Ridl.) N.W.Simmonds",
           "pisang utan",
           "true apple banana",
-          "wild Malaysian banana"
-        ],
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4618,
-          4637,
-          4640,
-          4641,
-          4734,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          214687,
-          1437183,
-          1437197
-        ]
-      },
+          "wild Malaysian banana"],
+        "rank_s":"subspecies",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:214687",
+        "is_a_is":[4641],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:214687 | Musa acuminata subsp. malaccensis",
+        "_genes":37579,
+        "_version_":1504713762530131975},
       {
-        "_id": 214909,
-        "name": "Byttnerioideae",
-        "is_a": [
-          3629
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3629,
-          33090,
-          35493,
-          41938,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          214909,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:subfamily",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":214909,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3629],
+        "id_s":"NCBITaxon:214909",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"subfamily",
+        "name_s":"Byttnerioideae",
+        "_terms":"NCBITaxon:214909 | Byttnerioideae",
+        "_genes":29188,
+        "_version_":1504713762530131976},
       {
-        "_id": 232365,
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "stem Magnoliophyta"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          232365
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "basal Magnoliophyta",
-        "is_a": [
-          3398
-        ]
-      },
+        "id":232365,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:232365",
+        "is_a_is":[3398],
+        "synonym_ss":["stem Magnoliophyta"],
+        "name_s":"basal Magnoliophyta",
+        "_terms":"NCBITaxon:232365 | basal Magnoliophyta",
+        "_genes":28721,
+        "_version_":1504713762530131977},
       {
-        "_id": 238069,
-        "property_value": "has_rank NCBITaxon:tribe",
-        "namespace": "ncbi_taxonomy",
-        "name": "Saliceae",
-        "is_a": [
-          3688
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3646,
-          3688,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          238069,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":238069,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:238069",
+        "is_a_is":[3688],
+        "rank_s":"tribe",
+        "name_s":"Saliceae",
+        "_terms":"NCBITaxon:238069 | Saliceae",
+        "_genes":41377,
+        "_version_":1504713762530131978},
       {
-        "_id": 242159,
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          13792,
-          33090,
-          70447,
-          131567,
-          242159,
-          1035538
-        ],
-        "namespace": "ncbi_taxonomy",
-        "synonym": [
-          "Ostreococcus lucimarinus",
-          "Ostreococcus sp. CCE9901"
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "is_a": [
-          70447
-        ],
-        "name": "Ostreococcus 'lucimarinus'",
-        "property_value": "has_rank NCBITaxon:species"
-      },
+        "id":242159,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[70447],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:242159",
+        "synonym_ss":["Ostreococcus lucimarinus",
+          "Ostreococcus sp. CCE9901"],
+        "rank_s":"species",
+        "name_s":"Ostreococcus 'lucimarinus'",
+        "_terms":"NCBITaxon:242159 | Ostreococcus 'lucimarinus'",
+        "_genes":7640,
+        "_version_":1504713762530131979},
       {
-        "_id": 261009,
-        "property_value": "has_rank NCBITaxon:order",
-        "namespace": "ncbi_taxonomy",
-        "name": "Amborellales",
-        "is_a": [
-          232365
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          232365,
-          261009
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":261009,
+        "name_s":"Amborellales",
+        "rank_s":"order",
+        "is_a_is":[232365],
+        "id_s":"NCBITaxon:261009",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:261009 | Amborellales",
+        "_genes":28721,
+        "_version_":1504713762530131980},
       {
-        "_id": 265316,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          2763,
-          2797,
-          131567,
-          265316,
-          265318
-        ],
-        "is_a": [
-          265318
-        ],
-        "name": "Cyanidiaceae",
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:family"
-      },
+        "id":265316,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[265318],
+        "id_s":"NCBITaxon:265316",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"family",
+        "name_s":"Cyanidiaceae",
+        "_terms":"NCBITaxon:265316 | Cyanidiaceae",
+        "_genes":5106,
+        "_version_":1504713762530131981},
       {
-        "_id": 265318,
-        "ancestors": [
-          1,
-          2759,
-          2763,
-          2797,
-          131567,
-          265318
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Cyanidiales",
-        "is_a": [
-          2797
-        ],
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:order"
-      },
+        "id":265318,
+        "is_a_is":[2797],
+        "id_s":"NCBITaxon:265318",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Cyanidiales",
+        "rank_s":"order",
+        "_terms":"NCBITaxon:265318 | Cyanidiales",
+        "_genes":5106,
+        "_version_":1504713762530131982},
       {
-        "_id": 280699,
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          2763,
-          2797,
-          45156,
-          45157,
-          131567,
-          265316,
-          265318,
-          280699
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Cyanidioschyzon merolae strain 10D",
-        "is_a": [
-          45157
-        ]
-      },
+        "id":280699,
+        "id_s":"NCBITaxon:280699",
+        "xref_ss":["GC_ID:1"],
+        "name_s":"Cyanidioschyzon merolae strain 10D",
+        "is_a_is":[45157],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:280699 | Cyanidioschyzon merolae strain 10D",
+        "_genes":5106,
+        "_version_":1504713762530131983},
       {
-        "_id": 359160,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          4479,
-          4734,
-          33090,
-          35493,
-          38820,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          359160,
-          1437183,
-          1437197
-        ],
-        "is_a": [
-          4479
-        ],
-        "name": "BEP clade",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":359160,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[4479],
+        "name_s":"BEP clade",
+        "id_s":"NCBITaxon:359160",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:359160 | BEP clade",
+        "_genes":837584,
+        "_version_":1504713762530131984},
       {
-        "_id": 403667,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91834,
-          131221,
-          131567,
-          403667,
-          1437183,
-          1437201
-        ],
-        "is_a": [
-          91834
-        ],
-        "name": "Vitales",
-        "namespace": "ncbi_taxonomy",
-        "property_value": "has_rank NCBITaxon:order"
-      },
+        "id":403667,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[91834],
+        "id_s":"NCBITaxon:403667",
+        "xref_ss":["GC_ID:1"],
+        "rank_s":"order",
+        "name_s":"Vitales",
+        "_terms":"NCBITaxon:403667 | Vitales",
+        "_genes":29971,
+        "_version_":1504713762530131985},
       {
-        "_id": 404260,
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3208,
-          33090,
-          35493,
-          131221,
-          131567,
-          404260
-        ],
-        "is_a": [
-          3208
-        ],
-        "name": "Bryophytina",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":404260,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3208],
+        "name_s":"Bryophytina",
+        "id_s":"NCBITaxon:404260",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:404260 | Bryophytina",
+        "_genes":32273,
+        "_version_":1504713762530131986},
       {
-        "_id": 424551,
-        "property_value": "has_rank NCBITaxon:subfamily",
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          4070
-        ],
-        "name": "Solanoideae",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4069,
-          4070,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          91888,
-          131221,
-          131567,
-          424551,
-          1437183,
-          1437201
-        ]
-      },
+        "id":424551,
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:424551",
+        "is_a_is":[4070],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Solanoideae",
+        "rank_s":"subfamily",
+        "_terms":"NCBITaxon:424551 | Solanoideae",
+        "_genes":81736,
+        "_version_":1504713762530131987},
       {
-        "_id": 424574,
-        "name": "Solaneae",
-        "is_a": [
-          424551
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4069,
-          4070,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71274,
-          78536,
-          91827,
-          91888,
-          131221,
-          131567,
-          424551,
-          424574,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "property_value": "has_rank NCBITaxon:tribe",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":424574,
+        "name_s":"Solaneae",
+        "rank_s":"tribe",
+        "is_a_is":[424551],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:424574",
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:424574 | Solaneae",
+        "_genes":81736,
+        "_version_":1504713762530131988},
       {
-        "_id": 436017,
-        "namespace": "ncbi_taxonomy",
-        "name": "Ostreococcus lucimarinus CCE9901",
-        "is_a": [
-          242159
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          13792,
-          33090,
-          70447,
-          131567,
-          242159,
-          436017,
-          1035538
-        ],
-        "xref": [
-          "GC_ID:1"
-        ]
-      },
+        "id":436017,
+        "namespace_s":"ncbi_taxonomy",
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:436017",
+        "name_s":"Ostreococcus lucimarinus CCE9901",
+        "is_a_is":[242159],
+        "_terms":"NCBITaxon:436017 | Ostreococcus lucimarinus CCE9901",
+        "_genes":7640,
+        "_version_":1504713762530131989},
       {
-        "_id": 721805,
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3744,
-          3745,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          171637,
-          721805,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Amygdaleae",
-        "is_a": [
-          171637
-        ]
-      },
+        "id":721805,
+        "id_s":"NCBITaxon:721805",
+        "xref_ss":["GC_ID:1"],
+        "name_s":"Amygdaleae",
+        "is_a_is":[171637],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:721805 | Amygdaleae",
+        "_genes":29499,
+        "_version_":1504713762530131990},
       {
-        "_id": 980083,
-        "is_a": [
-          3700
-        ],
-        "name": "Camelineae",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          980083,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:tribe",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":980083,
+        "is_a_is":[3700],
+        "id_s":"NCBITaxon:980083",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Camelineae",
+        "rank_s":"tribe",
+        "_terms":"NCBITaxon:980083 | Camelineae",
+        "_genes":66269,
+        "_version_":1504713762531180544},
       {
-        "_id": 981071,
-        "is_a": [
-          3700
-        ],
-        "name": "Brassiceae",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3699,
-          3700,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          78536,
-          91827,
-          91836,
-          131221,
-          131567,
-          981071,
-          1437183,
-          1437201
-        ],
-        "property_value": "has_rank NCBITaxon:tribe",
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":981071,
+        "rank_s":"tribe",
+        "name_s":"Brassiceae",
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3700],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:981071",
+        "_terms":"NCBITaxon:981071 | Brassiceae",
+        "_genes":102071,
+        "_version_":1504713762531180545},
       {
-        "_id": 1035538,
-        "property_value": "has_rank NCBITaxon:class",
-        "namespace": "ncbi_taxonomy",
-        "is_a": [
-          3041
-        ],
-        "name": "Mamiellophyceae",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3041,
-          33090,
-          131567,
-          1035538
-        ]
-      },
+        "id":1035538,
+        "namespace_s":"ncbi_taxonomy",
+        "is_a_is":[3041],
+        "xref_ss":["GC_ID:1"],
+        "id_s":"NCBITaxon:1035538",
+        "rank_s":"class",
+        "name_s":"Mamiellophyceae",
+        "_terms":"NCBITaxon:1035538 | Mamiellophyceae",
+        "_genes":7640,
+        "_version_":1504713762531180546},
       {
-        "_id": 1437183,
-        "is_a": [
-          3398
-        ],
-        "name": "Mesangiospermae",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":1437183,
+        "is_a_is":[3398],
+        "name_s":"Mesangiospermae",
+        "id_s":"NCBITaxon:1437183",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:1437183 | Mesangiospermae",
+        "_genes":1543860,
+        "_version_":1504713762531180547},
       {
-        "_id": 1437197,
-        "name": "Petrosaviidae",
-        "is_a": [
-          4447
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          4447,
-          33090,
-          35493,
-          58023,
-          58024,
-          78536,
-          131221,
-          131567,
-          1437183,
-          1437197
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "namespace": "ncbi_taxonomy"
-      },
+        "id":1437197,
+        "namespace_s":"ncbi_taxonomy",
+        "name_s":"Petrosaviidae",
+        "is_a_is":[4447],
+        "id_s":"NCBITaxon:1437197",
+        "xref_ss":["GC_ID:1"],
+        "_terms":"NCBITaxon:1437197 | Petrosaviidae",
+        "_genes":1055502,
+        "_version_":1504713762531180548},
       {
-        "_id": 1437201,
-        "namespace": "ncbi_taxonomy",
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          78536,
-          91827,
-          131221,
-          131567,
-          1437183,
-          1437201
-        ],
-        "xref": [
-          "GC_ID:1"
-        ],
-        "name": "Pentapetalae",
-        "is_a": [
-          91827
-        ]
-      },
+        "id":1437201,
+        "is_a_is":[91827],
+        "name_s":"Pentapetalae",
+        "id_s":"NCBITaxon:1437201",
+        "xref_ss":["GC_ID:1"],
+        "namespace_s":"ncbi_taxonomy",
+        "_terms":"NCBITaxon:1437201 | Pentapetalae",
+        "_genes":488358,
+        "_version_":1504713762531180549},
       {
-        "_id": 1462606,
-        "is_a": [
-          3846
-        ],
-        "name": "Soja",
-        "xref": [
-          "GC_ID:1"
-        ],
-        "ancestors": [
-          1,
-          2759,
-          3193,
-          3398,
-          3803,
-          3814,
-          3846,
-          33090,
-          35493,
-          58023,
-          58024,
-          71240,
-          71275,
-          72025,
-          78536,
-          91827,
-          91835,
-          131221,
-          131567,
-          163735,
-          1437183,
-          1437201,
-          1462606
-        ],
-        "property_value": "has_rank NCBITaxon:subgenus",
-        "namespace": "ncbi_taxonomy"
-      }
-    ]
-  }
+        "id":1462606,
+        "rank_s":"subgenus",
+        "name_s":"Soja",
+        "namespace_s":"ncbi_taxonomy",
+        "id_s":"NCBITaxon:1462606",
+        "xref_ss":["GC_ID:1"],
+        "is_a_is":[3846],
+        "_terms":"NCBITaxon:1462606 | Soja",
+        "_genes":54174,
+        "_version_":1504713762531180550}]
+    }}
 };

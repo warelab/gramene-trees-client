@@ -8,7 +8,7 @@ describe('Trees', function () {
   var root;
 
   beforeEach(function() {
-    root = taxonomy.tree(fixture.data.response);
+    root = taxonomy.tree(fixture.data.response.docs);
   });
 
   it('should populate treemodel api', function () {

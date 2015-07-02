@@ -18,7 +18,7 @@ module.exports = {
 };
 
 function justTheData(json) {
-  return Q(json.data.response);
+  return Q(json.data.response.docs);
 }
 
 function taxonomyPromise(data) {
