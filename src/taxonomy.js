@@ -89,6 +89,29 @@ module.exports = {
           .value();
         return parentNodesInCommon.pop();
       };
+
+      tree.pathBetween = function pathBetweenNodes(from, to) {
+
+        var
+
+        // find the lowest commen ancestor
+          lca = tree.lca([from, to]),
+
+        // get the full path from -> root, and reverse it
+          fromPath = _(from.getPath().reverse()),
+
+        // get the full path to -> root
+            toPath = _(to.getPath()),
+
+        // find the index of lca in fromPath and toPath
+            fromLcaIdx = fromPath.findIndex(lca),
+            toLcaIdx = toPath.findIndex(lca),
+
+        // slice and combine the arrays to get the path between
+            pathBetween = fromPath.slice(0, fromLcaIdx).concat(toPath.slice(toLcaIdx).value());
+
+        return pathBetween.value();
+      };
     }
 
     function indexTree(tree, attrs) {

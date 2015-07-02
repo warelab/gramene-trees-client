@@ -106,4 +106,16 @@ describe('Trees', function () {
     expect(plantRoot.model.name).toEqual('Eukaryota');
   });
 
+  it('should find path between nodes', function() {
+    // given
+    var from = root.indices.id[39947],
+        to = root.indices.id[4528];
+
+    // when
+    var path = root.pathBetween(from, to);
+
+    // then
+    expect(path.length).toEqual(4);
+  });
+
 });
