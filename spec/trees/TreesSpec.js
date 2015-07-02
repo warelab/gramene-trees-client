@@ -8,7 +8,7 @@ describe('Trees', function () {
   var root;
 
   beforeEach(function() {
-    root = taxonomy.tree(fixture.data.response);
+    root = taxonomy.tree(fixture.data.response.docs);
   });
 
   it('should populate treemodel api', function () {
@@ -104,6 +104,18 @@ describe('Trees', function () {
     var plantRoot = root.lca(species);
 
     expect(plantRoot.model.name).toEqual('Eukaryota');
+  });
+
+  it('should find path between nodes', function() {
+    // given
+    var from = root.indices.id[39947],
+        to = root.indices.id[4528];
+
+    // when
+    var path = root.pathBetween(from, to);
+
+    // then
+    expect(path.length).toEqual(4);
   });
 
 });
