@@ -21,12 +21,12 @@ describe('TaxonomyPromise', function() {
     });
   });
 
-  it('should request data from http://data.gramene.org/taxonomy/select?rows=999999', function() {
+  it('should request data from http://data.gramene.org/search/taxonomy', function() {
     // when
     taxonomyPromiser.get();
 
     // then
-    expect(axios.get.mostRecentCall.args[0]).toEqual('http://data.gramene.org/taxonomy/select?rows=999999');
+    expect(axios.get.mostRecentCall.args[0]).toEqual('http://data.gramene.org/search/taxonomy?q=*&rows=9999999&fl=id,is_a_is,rank_s,name_s,synonym_ss,_genes');
   });
 
   it('should return a tree', function() {
