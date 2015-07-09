@@ -34,8 +34,11 @@ module.exports = {
       function childNodeNameLexComparator(a, b) {
         return a.name > b.name ? 1 : -1;
       }
+      function childNodeGeneCountComparator(a, b) {
+        return a.geneCount < b.geneCount ? 1 : -1;
+      }
 
-      return new TreeModel({modelComparatorFn: childNodeNameLexComparator}).parse(nestedTaxa);
+      return new TreeModel({modelComparatorFn: childNodeGeneCountComparator}).parse(nestedTaxa);
     }
 
     function compressTreePaths(tree) {

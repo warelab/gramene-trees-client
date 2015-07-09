@@ -25,7 +25,7 @@ describe('Trees', function () {
     expect(leaves.length).toEqual(39);
   });
 
-  it('should sort child nodes alphabetically', function () {
+  xit('should sort child nodes alphabetically', function () {
     // when we get all nodes with >1 child
     var multipleChildrenNodes = root.all(function (n) {
       return n.children.length > 1;
@@ -40,6 +40,25 @@ describe('Trees', function () {
         b = children[i].model.name;
 
         expect(a < b).toBeTruthy(a + ' should lexically precede ' + b);
+      }
+    });
+  });
+
+  it('should sort child nodes by geneCount', function () {
+    // when we get all nodes with >1 child
+    var multipleChildrenNodes = root.all(function (n) {
+      return n.children.length > 1;
+    });
+
+    multipleChildrenNodes.map(function(node) {
+      var children = node.children,
+        a,
+        b;
+      for(var i = 1; i < children.length; i++) {
+        a = children[i-1].model.geneCount;
+        b = children[i].model.geneCount;
+
+        expect(a > b).toBeTruthy(a + ' should have more genes than ' + b);
       }
     });
   });
