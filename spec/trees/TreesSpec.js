@@ -79,6 +79,7 @@ describe('Trees', function () {
     var rootById = root.indices.id[1];
     var rootByName = root.indices.name['root'];
 
+    expect(rootById).not.toBeUndefined();
     expect(rootById === rootByName).toBeTruthy();
   });
 
@@ -90,6 +91,17 @@ describe('Trees', function () {
     expect(cellularByName.model.id).toEqual(131567);
     expect(cellularByName.children.length).toEqual(1);
     expect(cellularByName.parent.model.name).toEqual('root');
+  });
+
+  it('should have 2 Arabidopses', function () {
+    // given
+    var arabidopsis = root.indices.name['Arabidopsis'];
+
+    // when
+    var leaves = arabidopsis.leafNodes();
+
+    // then
+    expect(leaves.length).toEqual(2);
   });
 
   it('should calculate last common ancestor from the tree', function() {
@@ -125,6 +137,41 @@ describe('Trees', function () {
     expect(plantRoot.model.name).toEqual('Eukaryota');
   });
 
+  it('should find the last common ancestor of all Arabidopses', function() {
+    // given
+    var ath = root.indices.name['Arabidopsis thaliana'];
+    var aly = root.indices.name['Arabidopsis lyrata'];
+
+    // when
+    var aRoot = root.lca([ath, aly]);
+
+    expect(aRoot.model.name).toEqual('Arabidopsis');
+  });
+
+  it('should find the last common ancestor of all Arabidopses using prototype method on Ath', function() {
+    // given
+    var ath = root.indices.name['Arabidopsis thaliana'];
+    var aly = root.indices.name['Arabidopsis lyrata'];
+
+    // when
+    var aRoot = ath.lcaWith([aly]);
+
+    expect(aRoot.model.name).toEqual('Arabidopsis');
+  });
+
+  it('should find the depth of nodes correctly', function() {
+    // given
+    var ath = root.indices.name['Arabidopsis thaliana'],
+        aly = root.indices.name['Arabidopsis lyrata'],
+        euk = root.indices.name['Eukaryota'];
+
+    // then
+    expect(root.depth()).toEqual(0);
+    expect(euk.depth()).toEqual(1);
+    expect(euk.depth(true)).toEqual(2);
+    expect(ath.depth()).toEqual(aly.depth());
+  });
+
   it('should find path between nodes', function() {
     // given
     var from = root.indices.id[39947],
@@ -135,6 +182,22 @@ describe('Trees', function () {
 
     // then
     expect(path.length).toEqual(4);
+    expect(path[0]).toEqual(from);
+    expect(path[path.length - 1]).toEqual(to);
+  });
+
+  it('should find path between nodes using prototype method on all Nodes', function() {
+    // given
+    var from = root.indices.id[39947],
+        to = root.indices.id[4528];
+
+    // when
+    var path = from.pathTo(to);
+
+    // then
+    expect(path.length).toEqual(4);
+    expect(path[0]).toEqual(from);
+    expect(path[path.length - 1]).toEqual(to);
   });
 
 });

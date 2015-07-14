@@ -68,20 +68,6 @@ module.exports = {
     }
 
     function decorateTree(tree) {
-      tree.depth = function calculateEffectiveNodeDepth(node) {
-        var path = node.getPath()
-          , depth = path.length - 1
-          , compressedDepth = _.reduce(path, function (acc, n) {
-            return acc + (n.compressedNodes ? n.compressedNodes.length : 0);
-          }, 0);
-
-        return depth + compressedDepth;
-      };
-
-      tree.leafNodes = function findAllLeafNodes() {
-        return tree.all(function (node) { return !node.hasChildren(); });
-      };
-
       tree.lca = function lowestCommonAncestor(nodes) {
         var parentNodesInCommon = _.chain(nodes)
           .map(function (node) {
@@ -118,6 +104,39 @@ module.exports = {
       };
     }
 
+    function addPrototypeDecorations(tree) {
+      var prototree = Object.getPrototypeOf(tree);
+
+      prototree.depth = function calculateEffectiveNodeDepth(includeCompressedNodes) {
+        var path = this.getPath()
+          , depth = path.length - 1
+          , compressedDepth;
+
+        if(includeCompressedNodes) {
+          compressedDepth = _.reduce(path, function (acc, n) {
+            return acc + (n.compressedNodes ? n.compressedNodes.length : 0);
+          }, 0);
+          depth += compressedDepth;
+        }
+
+        return depth;
+      };
+
+      prototree.pathTo = function(to) {
+        return tree.pathBetween(this, to);
+      };
+
+      prototree.leafNodes = function findAllLeafNodes() {
+        return this.all(function (node) { return !node.hasChildren(); });
+      };
+
+      prototree.lcaWith = function(otherNodes) {
+        var nodes = _.clone(otherNodes);
+        nodes.push(this);
+        return tree.lca(nodes);
+      }
+    }
+
     function indexTree(tree, attrs) {
       tree.indices = _.chain(attrs)
         .map(function (attr) {
@@ -141,6 +160,7 @@ module.exports = {
     indexTree(tree, ['id', 'name']);
     compressTreePaths(tree);
     decorateTree(tree);
+    addPrototypeDecorations(tree);
 
     return tree;
   }
