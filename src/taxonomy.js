@@ -13,19 +13,21 @@ module.exports = {
   tree: function (taxonomy) {
     function cleanUpProperties(taxonomy) {
       return taxonomy.map(function (taxon) {
-        if (!taxon.is_a_is) {
-          if (taxon.id !== 1) {
+        if (!taxon.is_a) {
+          if (taxon._id !== 1) {
             throw new Error('unrooted node!');
           }
         }
-
+        if (taxon.hasOwnProperty('property_value')) {
+          taxon.rank = taxon.property_value.replace(/has_rank NCBITaxon:/,'');
+        }
         return {
-          id: taxon.id,
-          parent: taxon.is_a_is ? taxon.is_a_is[0] : undefined,
-          rank: taxon.rank_s || 'not specified',
-          name: taxon.name_s,
-          synonyms: taxon.synonym_ss || [],
-          geneCount: taxon._genes
+          id: taxon._id,
+          parent: taxon.is_a ? taxon.is_a[0] : undefined,
+          rank: taxon.rank,
+          name: taxon.name,
+          synonyms: taxon.synonym || [],
+          geneCount: taxon.num_genes
         };
       });
     }
