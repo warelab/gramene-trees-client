@@ -56,6 +56,7 @@ module.exports = {
         node.parent = parent;
         node.compressed = true;
 
+        // Add compressed nodes to child and not parent
         if (!child.compressedNodes) {
           child.compressedNodes = [];
         }
@@ -71,7 +72,7 @@ module.exports = {
       tree.lca = function lowestCommonAncestor(nodes) {
         var parentNodesInCommon = _.chain(nodes)
           .map(function (node) {
-            return node.getPath(); // .map(function (n) { return n.model.id });
+            return node.getPath();
           })
           .reduce(function (acc, nextPath) {
             return _.intersection(acc, nextPath)
@@ -82,23 +83,23 @@ module.exports = {
 
       tree.pathBetween = function pathBetweenNodes(from, to) {
 
-        var
+        var lca, fromPath, toPath, fromLcaIdx, toLcaIdx, pathBetween;
 
         // find the lowest commen ancestor
-          lca = tree.lca([from, to]),
+        lca = tree.lca([from, to]);
 
         // get the full path from -> root, and reverse it
-          fromPath = _(from.getPath().reverse()),
+        fromPath = _(from.getPath().reverse());
 
         // get the full path to -> root
-            toPath = _(to.getPath()),
+        toPath = _(to.getPath());
 
         // find the index of lca in fromPath and toPath
-            fromLcaIdx = fromPath.findIndex(lca),
-            toLcaIdx = toPath.findIndex(lca),
+        fromLcaIdx = fromPath.findIndex(lca);
+        toLcaIdx = toPath.findIndex(lca);
 
         // slice and combine the arrays to get the path between
-            pathBetween = fromPath.slice(0, fromLcaIdx).concat(toPath.slice(toLcaIdx).value());
+        pathBetween = fromPath.slice(0, fromLcaIdx).concat(toPath.slice(toLcaIdx).value());
 
         return pathBetween.value();
       };
