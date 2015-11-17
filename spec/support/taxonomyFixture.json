@@ -1,5 +1,5 @@
-module.exports = {
-  data: {
+{
+  "data": {
     "responseHeader":{
       "status":0,
       "QTime":1,
@@ -2078,4 +2078,4 @@ module.exports = {
         "_genes":54174,
         "_version_":1504713762531180550}]
     }}
-};
+}
