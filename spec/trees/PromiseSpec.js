@@ -26,7 +26,7 @@ describe('TaxonomyPromise', function() {
     taxonomyPromiser.get();
 
     // then
-    expect(axios.get.mostRecentCall.args[0]).toEqual('http://data.gramene.org/search/taxonomy?q=*&rows=9999999&fl=id,is_a_is,rank_s,name_s,synonym_ss,_genes');
+    expect(axios.get.mostRecentCall.args[0]).toEqual('http://brie:10010/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
   });
 
   it('should return a tree', function() {
