@@ -9,7 +9,7 @@ module.exports = {
       src = Q(require('../spec/support/taxonomyFixture'));
     }
     else {
-      src = axios.get('http://brie:10010/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
+      src = axios.get('http://devdata.gramene.org/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
     }
     return src
       .then(taxonomyPromise);
