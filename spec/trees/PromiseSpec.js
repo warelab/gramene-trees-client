@@ -10,7 +10,8 @@ describe('TaxonomyPromise', function() {
     taxonomyPromiser = require('../../src/promise');
     expectedResult = Q(genomeFixture);
 
-    spyOn(axios, 'get').andReturn(expectedResult);
+    //spyOn(axios, 'get').andReturn(expectedResult);
+    spyOn(axios, 'get').andCallThrough();
   });
 
   it('should work with local data file', function() {
@@ -26,7 +27,7 @@ describe('TaxonomyPromise', function() {
     taxonomyPromiser.get();
 
     // then
-    expect(axios.get.mostRecentCall.args[0]).toEqual('http://brie:10010/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
+    expect(axios.get.mostRecentCall.args[0]).toEqual('http://devdata.gramene.org/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
   });
 
   it('should return a tree', function() {

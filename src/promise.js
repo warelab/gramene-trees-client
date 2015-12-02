@@ -12,9 +12,14 @@ module.exports = {
       src = axios.get('http://devdata.gramene.org/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
     }
     return src
+      .then(justTheData)
       .then(taxonomyPromise);
   }
 };
+
+function justTheData(json) {
+  return Q(json.data);
+}
 
 function taxonomyPromise(data) {
   return Q.fcall(taxonomy.tree, data);
