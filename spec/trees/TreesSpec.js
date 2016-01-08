@@ -2,7 +2,7 @@ describe('Trees', function () {
   // json response to http://data.gramene.org/taxonomy/select?rows=-1
   // converted into a commonJS module by prepending json doc with
   // `module.exports = `
-  var fixture = require('../support/taxonomyFixture.json').data;
+  var fixture = require('../support/taxonomyFixture.json').obj;
   var taxonomy = require('../../src/taxonomy');
 
   var root;
