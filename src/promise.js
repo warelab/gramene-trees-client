@@ -1,4 +1,7 @@
-var axios = require('axios');
+'use strict';
+
+var grameneClient = require('gramene-search-client').client.grameneClient;
+var validateFactory = require('gramene-search-client').client.validate;
 var Q = require('q');
 var taxonomy = require('./taxonomy');
 
@@ -9,16 +12,27 @@ module.exports = {
       src = Q(require('../spec/support/taxonomyFixture'));
     }
     else {
-      src = axios.get('http://devdata.gramene.org/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
+      src = grameneClient.then(function(client) {
+        var deferred, params;
+        deferred = Q.defer();
+        params = {rows: -1, fl: ['_id', 'is_a', 'property_value', 'name', 'synonym', 'num_genes']};
+        client['Data access'].taxonomy(params, function(response) {
+          response.client = client;
+          deferred.resolve(response);
+        });
+        return deferred.promise;
+      });
+      //src = axios.get('http://devdata.gramene.org/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
     }
     return src
+      .then(validateFactory('TaxonomyResponse'))
       .then(justTheData)
       .then(taxonomyPromise);
   }
 };
 
 function justTheData(json) {
-  return Q(json.data);
+  return Q(json.obj);
 }
 
 function taxonomyPromise(data) {

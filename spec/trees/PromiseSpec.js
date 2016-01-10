@@ -1,6 +1,7 @@
 var axios = require('axios');
 var Q = require('q');
 var genomeFixture = require('../support/taxonomyFixture');
+var client = require('gramene-search-client').client.grameneClient;
 
 describe('TaxonomyPromise', function() {
 
@@ -10,8 +11,9 @@ describe('TaxonomyPromise', function() {
     taxonomyPromiser = require('../../src/promise');
     expectedResult = Q(genomeFixture);
 
+    spyOn(client, 'then').andCallThrough();
     //spyOn(axios, 'get').andReturn(expectedResult);
-    spyOn(axios, 'get').andCallThrough();
+    //spyOn(axios, 'get').andCallThrough();
   });
 
   it('should work with local data file', function() {
@@ -20,14 +22,6 @@ describe('TaxonomyPromise', function() {
     }).catch(function(error) {
       expect(error).toBeUndefined();
     });
-  });
-
-  it('should request data from http://data.gramene.org/search/taxonomy', function() {
-    // when
-    taxonomyPromiser.get();
-
-    // then
-    expect(axios.get.mostRecentCall.args[0]).toEqual('http://devdata.gramene.org/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
   });
 
   it('should return a tree', function() {
