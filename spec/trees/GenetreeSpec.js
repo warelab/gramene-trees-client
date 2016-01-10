@@ -17,12 +17,14 @@ describe('Genetrees', function () {
     expect(root.hasChildren()).toBeTruthy();
   });
 
-  it('should have 149 species', function () {
+  it('should have 149 species and an _id property', function () {
     // when
     var leaves = root.leafNodes();
 
     // then
     expect(leaves.length).toEqual(149);
+    expect(root.geneCount).toEqual(149);
+    expect(root._id).toEqual('EPlGT00140000001539');
   });
 
   it('should find gene id in index', function() {

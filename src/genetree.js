@@ -12,6 +12,7 @@ module.exports = {
     extensions.decorateTree(tree);
     extensions.addPrototypeDecorations(tree);
     tree.geneCount = tree.leafNodes().length;
+    tree._id = tree.model._id;
     return tree;
   }
 }
