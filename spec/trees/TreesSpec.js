@@ -200,4 +200,46 @@ describe('Trees', function () {
     expect(path[path.length - 1]).toEqual(to);
   });
 
+  it('should walk the whole tree if filterWalk\'s callback evaluates to true', function() {
+    // given
+    var count = 0;
+
+    // when
+    root.filterWalk(function() {
+      ++count;
+      return true;
+    });
+
+    // then
+    expect(count).toEqual(68);
+  });
+
+  it('should only evaluate one node if filterWalk\'s callback evaluates to false', function() {
+    // given
+    var count = 0;
+
+    // when
+    root.filterWalk(function() {
+      ++count;
+      return false;
+    });
+
+    // then
+    expect(count).toEqual(1);
+  });
+
+  it('should only evaluate a root and "trunk" nodes if filterWalk\'s callback tests for shallow node depth', function() {
+    // given
+    var count = 0;
+
+    // when
+    root.filterWalk(function(node) {
+      ++count;
+      return node.depth() < 3;
+    });
+
+    // then
+    expect(count).toEqual(6);
+  });
+
 });

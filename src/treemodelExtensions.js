@@ -71,6 +71,16 @@ function addPrototypeDecorations(tree) {
     var nodes = _.clone(otherNodes);
     nodes.push(this);
     return tree.lca(nodes);
+  };
+
+  prototree.filterWalk = function (callback) {
+    function filterWalkRecursive(node) {
+      var evaluateChildren = callback(node);
+      if(evaluateChildren && _.isArray(node.children)) {
+        _.forEach(node.children, filterWalkRecursive)
+      }
+    }
+    return filterWalkRecursive(this);
   }
 }
 
