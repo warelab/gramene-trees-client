@@ -1,4 +1,3 @@
-var axios = require('axios');
 var Q = require('q');
 var genomeFixture = require('../support/taxonomyFixture');
 var client = require('gramene-search-client').client.grameneClient;
@@ -12,8 +11,6 @@ describe('TaxonomyPromise', function() {
     expectedResult = Q(genomeFixture);
 
     spyOn(client, 'then').andCallThrough();
-    //spyOn(axios, 'get').andReturn(expectedResult);
-    //spyOn(axios, 'get').andCallThrough();
   });
 
   it('should work with local data file', function() {
