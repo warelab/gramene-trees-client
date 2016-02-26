@@ -22,7 +22,7 @@
   "dependencies": {
     "axios": "^0.5.2",
     "flat-to-nested": "^1.0.1",
-    "gramene-search-client": "2.5.4",
+    "gramene-search-client": "2.6.1",
     "lodash": "^3.6.0",
     "q": "^1.2.0",
     "tree-model": "^1.0.0"
