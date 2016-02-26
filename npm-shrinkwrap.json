@@ -1,29 +1,29 @@
 {
   "name": "gramene-trees-client",
-  "version": "2.3.2",
+  "version": "2.4.0",
   "dependencies": {
-    "axios": {
-      "version": "0.5.4",
-      "from": "axios@>=0.5.2 <0.6.0",
-      "resolved": "https://registry.npmjs.org/axios/-/axios-0.5.4.tgz",
-      "dependencies": {
-        "es6-promise": {
-          "version": "2.3.0",
-          "from": "es6-promise@>=2.0.1 <3.0.0",
-          "resolved": "https://registry.npmjs.org/es6-promise/-/es6-promise-2.3.0.tgz"
-        }
-      }
-    },
     "flat-to-nested": {
       "version": "1.0.2",
       "from": "flat-to-nested@>=1.0.1 <2.0.0",
       "resolved": "https://registry.npmjs.org/flat-to-nested/-/flat-to-nested-1.0.2.tgz"
     },
     "gramene-search-client": {
-      "version": "2.5.4",
-      "from": "gramene-search-client@2.5.4",
-      "resolved": "https://registry.npmjs.org/gramene-search-client/-/gramene-search-client-2.5.4.tgz",
+      "version": "2.6.1",
+      "from": "gramene-search-client@2.6.1",
+      "resolved": "https://registry.npmjs.org/gramene-search-client/-/gramene-search-client-2.6.1.tgz",
       "dependencies": {
+        "query-string": {
+          "version": "3.0.0",
+          "from": "https://registry.npmjs.org/query-string/-/query-string-3.0.0.tgz",
+          "resolved": "https://registry.npmjs.org/query-string/-/query-string-3.0.0.tgz",
+          "dependencies": {
+            "strict-uri-encode": {
+              "version": "1.1.0",
+              "from": "https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz",
+              "resolved": "https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz"
+            }
+          }
+        },
         "swagger-client": {
           "version": "2.1.10",
           "from": "https://registry.npmjs.org/swagger-client/-/swagger-client-2.1.10.tgz",
