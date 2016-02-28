@@ -8,9 +8,8 @@
       "resolved": "https://registry.npmjs.org/flat-to-nested/-/flat-to-nested-1.0.2.tgz"
     },
     "gramene-search-client": {
-      "version": "2.6.1",
-      "from": "gramene-search-client@2.6.1",
-      "resolved": "https://registry.npmjs.org/gramene-search-client/-/gramene-search-client-2.6.1.tgz",
+      "version": "2.6.2",
+      "from": "gramene-search-client@2.6.2",
       "dependencies": {
         "query-string": {
           "version": "3.0.0",
