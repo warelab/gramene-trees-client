@@ -1,6 +1,6 @@
 {
   "name": "gramene-trees-client",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "dependencies": {
     "flat-to-nested": {
       "version": "1.0.2",
