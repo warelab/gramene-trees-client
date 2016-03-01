@@ -242,4 +242,12 @@ describe('Trees', function () {
     expect(count).toEqual(6);
   });
 
+  it('should not attempt to calculate lca if a node is null', function() {
+    var a, b;
+    a = root.indices.id[39947];
+
+    expect(function() { a.lcaWith([b]) }).toThrow("Cannot calculate lca with a null node");
+    expect(function() { root.lca([a, b]) }).toThrow("Cannot calculate lca with a null node");
+  })
+
 });
