@@ -4,6 +4,9 @@ function decorateTree(tree) {
   tree.lca = function lowestCommonAncestor(nodes) {
     var parentNodesInCommon = _.chain(nodes)
       .map(function (node) {
+        if(!node || !_.isFunction(node.getPath)) {
+          throw new Error('Cannot calculate lca with a null node');
+        }
         return node.getPath();
       })
       .reduce(function (acc, nextPath) {
