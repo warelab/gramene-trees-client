@@ -1,6 +1,10 @@
 var Q = require('q');
 var genomeFixture = require('../support/taxonomyFixture');
+
+global.gramene = { defaultServer: 'http://data.gramene.org/v50/swagger' };
+
 var client = require('gramene-search-client').client.grameneClient;
+
 
 describe('TaxonomyPromise', function() {
 
@@ -30,6 +34,7 @@ describe('TaxonomyPromise', function() {
       // then
       iWasCalled = true;
       expect(tree).toBeDefined();
+      expect(tree.all().length).toEqual(68);
       return tree;
     }
 

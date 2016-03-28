@@ -15,14 +15,16 @@ module.exports = {
       src = grameneClient.then(function(client) {
         var deferred, params;
         deferred = Q.defer();
-        params = {rows: -1, fl: ['_id', 'is_a', 'property_value', 'name', 'synonym', 'num_genes']};
-        client['Data access'].taxonomy(params, function(response) {
+        params = {
+          rows: -1,
+          subset: 'gramene',
+          fl: ['_id', 'is_a', 'property_value', 'name', 'synonym', 'num_genes']};
+        client['Data access'].taxonomy(params).then(function(response) {
           response.client = client;
           deferred.resolve(response);
         });
         return deferred.promise;
       });
-      //src = axios.get('http://devdata.gramene.org/taxonomy?rows=-1&fl=_id,is_a,property_value,name,synonym,num_genes');
     }
     return src
       .then(validateFactory('TaxonomyResponse'))
