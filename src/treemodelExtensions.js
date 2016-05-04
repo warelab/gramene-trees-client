@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var TreeModel = require('tree-model');
 
 function decorateTree(tree) {
   tree.lca = function lowestCommonAncestor(nodes) {
@@ -112,8 +113,48 @@ function indexTree(tree, attrs) {
     .value();
 }
 
+function pruneTree(tree, taxaOfInterest) {
+  
+  function possiblyAddChildren(source, dest, taxaOfInterest) {
+    var shouldAdd = false;
+    if (taxaOfInterest.hasOwnProperty(source.model.taxon_id)) {
+      return true;
+    }
+    else if (source.hasChildren()) {
+      source.children.forEach(function(sourceChild) {
+        var model = _.clone(sourceChild.model);
+        delete model.children;
+        var destChild = treeModel.parse(model);
+        if (possiblyAddChildren(sourceChild, destChild, taxaOfInterest)) {
+          dest.addChild(destChild);
+          shouldAdd = true;
+        }
+        else {
+          return false;
+        }
+      })
+    }
+    return shouldAdd;
+  }
+
+  var treeModel = new TreeModel({modelComparatorFn: tree.config.modelComparatorFn});
+  var model = _.clone(tree.model);
+  delete model.children;
+  var root = treeModel.parse(model);
+  possiblyAddChildren(tree, root, taxaOfInterest);
+  
+  if (tree.indices) {
+    indexTree(root, Object.keys(tree.indices));
+  }
+  decorateTree(root);
+  addPrototypeDecorations(root);
+  
+  return root;
+}
+
 module.exports = {
   decorateTree: decorateTree,
   addPrototypeDecorations: addPrototypeDecorations,
-  indexTree: indexTree
+  indexTree: indexTree,
+  pruneTree: pruneTree
 };
