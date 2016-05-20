@@ -113,23 +113,23 @@ function indexTree(tree, attrs) {
     .value();
 }
 
-function pruneTree(tree, taxaOfInterest) {
+function pruneTree(tree, testNode) {
   
-  function possiblyAddChildren(source, dest, taxaOfInterest) {
+  function possiblyAddChildren(source, dest) {
     if (source.hasChildren()) {
-      var shouldAdd = false;
+      var shouldAdd = testNode(source); // check the children either way
       source.children.forEach(function(sourceChild) {
         var model = _.clone(sourceChild.model);
         delete model.children;
         var destChild = treeModel.parse(model);
-        if (possiblyAddChildren(sourceChild, destChild, taxaOfInterest)) {
+        if (possiblyAddChildren(sourceChild, destChild)) {
           dest.addChild(destChild);
           shouldAdd = true;
         }
       });
       return shouldAdd;
     }
-    else if (taxaOfInterest.hasOwnProperty(source.model.taxon_id)) {
+    else if (testNode(source)) {
       return true;
     }
     return false;
@@ -139,7 +139,7 @@ function pruneTree(tree, taxaOfInterest) {
   var model = _.clone(tree.model);
   delete model.children;
   var root = treeModel.parse(model);
-  possiblyAddChildren(tree, root, taxaOfInterest);
+  possiblyAddChildren(tree, root);
   
   if (tree.indices) {
     indexTree(root, Object.keys(tree.indices));
