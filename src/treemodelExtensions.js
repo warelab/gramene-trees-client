@@ -5,7 +5,7 @@ function decorateTree(tree) {
   tree.lca = function lowestCommonAncestor(nodes) {
     var parentNodesInCommon = _.chain(nodes)
       .map(function (node) {
-        if(!node || !_.isFunction(node.getPath)) {
+        if (!node || !_.isFunction(node.getPath)) {
           throw new Error('Cannot calculate lca with a null node');
         }
         return node.getPath();
@@ -44,7 +44,7 @@ function decorateTree(tree) {
 function addPrototypeDecorations(tree) {
   var prototree = Object.getPrototypeOf(tree);
 
-  if(!shouldDecorateTreePrototype(prototree)) {
+  if (!shouldDecorateTreePrototype(prototree)) {
     return;
   }
 
@@ -53,7 +53,7 @@ function addPrototypeDecorations(tree) {
       , depth = path.length - 1
       , compressedDepth;
 
-    if(includeCompressedNodes) {
+    if (includeCompressedNodes) {
       compressedDepth = _.reduce(path, function (acc, n) {
         return acc + (n.compressedNodes ? n.compressedNodes.length : 0);
       }, 0);
@@ -63,15 +63,17 @@ function addPrototypeDecorations(tree) {
     return depth;
   };
 
-  prototree.pathTo = function(to) {
+  prototree.pathTo = function (to) {
     return tree.pathBetween(this, to);
   };
 
   prototree.leafNodes = function findAllLeafNodes() {
-    return this.all(function (node) { return !node.hasChildren(); });
+    return this.all(function (node) {
+      return !node.hasChildren();
+    });
   };
 
-  prototree.lcaWith = function(otherNodes) {
+  prototree.lcaWith = function (otherNodes) {
     var nodes = _.clone(otherNodes);
     nodes.push(this);
     return tree.lca(nodes);
@@ -80,10 +82,11 @@ function addPrototypeDecorations(tree) {
   prototree.filterWalk = function (callback) {
     function filterWalkRecursive(node) {
       var evaluateChildren = callback(node);
-      if(evaluateChildren && _.isArray(node.children)) {
+      if (evaluateChildren && _.isArray(node.children)) {
         _.forEach(node.children, filterWalkRecursive)
       }
     }
+
     return filterWalkRecursive(this);
   }
 }
@@ -103,7 +106,7 @@ function indexTree(tree, attrs) {
       var result = {_attr: attr};
       tree.walk(function (node) {
         var key = node.model[attr];
-        if(! _.isUndefined(key) ) {
+        if (!_.isUndefined(key)) {
           result[key] = node;
         }
       });
@@ -114,11 +117,11 @@ function indexTree(tree, attrs) {
 }
 
 function pruneTree(tree, testNode) {
-  
+
   function possiblyAddChildren(source, dest) {
     if (source.hasChildren()) {
       var shouldAdd = testNode(source); // check the children either way
-      source.children.forEach(function(sourceChild) {
+      source.children.forEach(function (sourceChild) {
         var model = _.clone(sourceChild.model);
         delete model.children;
         var destChild = treeModel.parse(model);
@@ -140,19 +143,137 @@ function pruneTree(tree, testNode) {
   delete model.children;
   var root = treeModel.parse(model);
   possiblyAddChildren(tree, root);
-  
+
   if (tree.indices) {
     indexTree(root, Object.keys(tree.indices));
   }
   decorateTree(root);
   addPrototypeDecorations(root);
-  
+
   return root;
+}
+
+function cigarToConsensus(cigar, seq) {
+
+  var pieces = cigar.split(/([DM])/);
+  var size = 0;
+  var stretch = 0;
+  var alignseq = "";
+  var frequency = [];
+
+  pieces.forEach(function (piece) {
+    if (piece === "M") {
+      if (stretch === 0) stretch = 1;
+      alignseq += seq.substr(size, stretch);
+      size += stretch;
+      for (i = 0; i < stretch; i++) {
+        frequency.push(1);
+      }
+      stretch = 0;
+    }
+    else if (piece === "D") {
+      if (stretch === 0) stretch = 1;
+      alignseq += '-'.repeat(stretch);
+      for (i = 0; i < stretch; i++) {
+        frequency.push(0);
+      }
+      stretch = 0;
+      //size += stretch;
+      stretch = 0;
+    }
+    else if (!!piece) {
+      stretch = +piece;
+    }
+  });
+  return {sequence: alignseq.split(''), frequency: frequency};
+}
+
+function addConsensus(tree) {
+  // generate a consensus for each node in the tree
+  // the consensus is a string and an array of frequencies (gap frequencies are always 0)
+  // for leaf nodes use the sequence and cigar attributes to define the node's consensus
+  // for internal nodes (2 children) select the consensus based on the frequency in the child nodes
+  if (tree.model.consensus) return;
+
+  function addConsensusToNode(node) {
+    if (node.model.sequence && node.model.cigar) {
+      // parse the cigar string and generate a consensus sequence
+      node.model.consensus = cigarToConsensus(node.model.cigar, node.model.sequence);
+    }
+    else {
+      node.children.forEach(function (child) {
+        addConsensusToNode(child);
+        if (!node.model.consensus) {
+          node.model.consensus = _.cloneDeep(child.model.consensus)
+        }
+        else {
+          for (var i = 0; i < child.model.consensus.sequence.length; i++) {
+            if (child.model.consensus.sequence[i] === node.model.consensus.sequence[i]) {
+              node.model.consensus.frequency[i] += child.model.consensus.frequency[i];
+            }
+            else if (child.model.consensus.frequency[i] > node.model.consensus.frequency[i]) {
+              node.model.consensus.frequency[i] = child.model.consensus.frequency[i];
+              node.model.consensus.sequence[i] = child.model.consensus.sequence[i];
+            }
+            else {
+
+            }
+          }
+        }
+      });
+    }
+  }
+
+  addConsensusToNode(tree);
+  removeGaps(tree);
+}
+
+function removeGaps(tree) {
+  // if there are gaps in the tree root's consensus, identify them and remove them from the rest of the tree
+  // remove gaps from the consensus, and from the cigar string in the leaf nodes (maybe ?)
+  var msaLength = tree.model.consensus.frequency.length;
+  var noGapSequence = [];
+  var noGapFrequency = [];
+  var isGap = [];
+  for (var i = 0; i < msaLength; i++) {
+    if (tree.model.consensus.frequency[i] > 0) {
+      noGapSequence.push(tree.model.consensus.sequence[i]);
+      noGapFrequency.push(tree.model.consensus.frequency[i]);
+      isGap[i] = false;
+    }
+    else {
+      isGap[i] = true;
+    }
+  }
+  if (noGapFrequency.length < msaLength) { // we actually removed some gaps
+    tree.model.consensus.frequency = noGapFrequency;
+    tree.model.consensus.sequence = noGapSequence;
+    function removeGapsFromChildren(node) {
+      node.children.forEach(function (child) {
+        var noGapSequence = [];
+        var noGapFrequency = [];
+        for (var i = 0; i < child.model.consensus.sequence.length; i++) {
+          if (!isGap[i]) {
+            noGapSequence.push(child.model.consensus.sequence[i]);
+            noGapFrequency.push(child.model.consensus.frequency[i]);
+          }
+        }
+        child.model.consensus.sequence = noGapSequence;
+        child.model.consensus.frequency = noGapFrequency;
+        if (child.children) {
+          removeGapsFromChildren(child);
+        }
+      });
+    }
+
+    removeGapsFromChildren(tree);
+  }
 }
 
 module.exports = {
   decorateTree: decorateTree,
   addPrototypeDecorations: addPrototypeDecorations,
   indexTree: indexTree,
-  pruneTree: pruneTree
+  pruneTree: pruneTree,
+  addConsensus: addConsensus
 };
