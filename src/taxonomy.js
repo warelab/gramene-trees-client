@@ -28,7 +28,8 @@ module.exports = {
           rank: taxon.rank,
           name: taxon.name,
           synonyms: taxon.synonym || [],
-          geneCount: taxon.num_genes
+          geneCount: taxon.num_genes,
+          reactomePrefix: taxon.reactomePrefix
         };
       });
     }
