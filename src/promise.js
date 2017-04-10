@@ -18,7 +18,7 @@ module.exports = {
         params = {
           rows: -1,
           subset: 'gramene',
-          fl: ['_id', 'is_a', 'property_value', 'name', 'synonym', 'num_genes']};
+          fl: ['_id', 'is_a', 'property_value', 'name', 'synonym', 'num_genes', 'reactomePrefix']};
         client['Data access'].taxonomy(params, function(response) {
           response.client = client;
           deferred.resolve(response);
