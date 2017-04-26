@@ -4,6 +4,7 @@ describe('Genetrees', function () {
   // `module.exports = `
   var fixture = require('../support/genetreeFixture.json');
   var genetree = require('../../src/genetree');
+  var identity = require('../../src/treemodelExtensions').identity;
 
   var root;
 
@@ -22,8 +23,8 @@ describe('Genetrees', function () {
     var leaves = root.leafNodes();
 
     // then
-    expect(leaves.length).toEqual(149);
-    expect(root.geneCount).toEqual(149);
+    expect(leaves.length).toEqual(182);
+    expect(root.geneCount).toEqual(182);
     expect(root._id).toEqual('EPlGT00140000001539');
   });
 
@@ -68,4 +69,12 @@ describe('Genetrees', function () {
     });
   });
 
+  it('should calculate identity for a pair of genes', function() {
+    var index = root.indices.gene_stable_id;
+    var gene1 = index['scaffold_502313.1'];
+    var gene2 = index['AT3G52430'];
+    var exact = identity(gene2,gene1);
+    var rounded = (Math.round(exact * 1000)/1000).toFixed(3);
+    expect(rounded).toEqual('0.815');
+  });
 });

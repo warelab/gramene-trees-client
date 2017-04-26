@@ -153,6 +153,37 @@ function pruneTree(tree, testNode) {
   return root;
 }
 
+function identity(geneA, geneB) {
+  if (geneA === geneB) {
+    return 1;
+  }
+
+  if (! geneA.model.consensus) {
+    geneA.model.consensus = cigarToConsensus(geneA.model.cigar, geneA.model.sequence);
+  }
+  if (! geneB.model.consensus) {
+    geneB.model.consensus = cigarToConsensus(geneB.model.cigar, geneB.model.sequence);
+  }
+
+  var seqA = geneA.model.consensus.sequence;
+  var seqB = geneB.model.consensus.sequence;
+  if (seqA.length !== seqB.length) {
+    console.error('alignment sequences are not the same length');
+    return 0;
+  }
+
+  var matchCnt = 0;
+  var totalCnt = 0;
+  for(var i=0; i<seqA.length; i++) {
+    totalCnt++;
+    if (seqA[i] === seqB[i]) {
+      if (seqA[i] === '-') totalCnt--;
+      else matchCnt++;
+    }
+  }
+  return matchCnt/totalCnt;
+}
+
 function cigarToConsensus(cigar, seq) {
 
   var pieces = cigar.split(/([DM])/);
@@ -275,5 +306,6 @@ module.exports = {
   addPrototypeDecorations: addPrototypeDecorations,
   indexTree: indexTree,
   pruneTree: pruneTree,
-  addConsensus: addConsensus
+  addConsensus: addConsensus,
+  identity: identity
 };
