@@ -134,7 +134,7 @@ function pruneTree(tree, testNode) {
         }
         else {
           // create a new node and add the kids to it
-          let model = _.clone(source.model);
+          var model = _.clone(source.model);
           delete model.children;
           var parent = treeModel.parse(model);
           kids.forEach(function (k) {
@@ -144,9 +144,9 @@ function pruneTree(tree, testNode) {
         }
       }
     }
-    else if (testNode(source)) {
-      let model = _.clone(source.model);
-      return treeModel.parse(model);
+    else if (testNode(source)) {let
+      var leaf = _.clone(source.model);
+      return treeModel.parse(leaf);
     }
     return false;
   }
