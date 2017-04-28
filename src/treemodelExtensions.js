@@ -117,33 +117,48 @@ function indexTree(tree, attrs) {
 }
 
 function pruneTree(tree, testNode) {
+  var treeModel = new TreeModel({modelComparatorFn: tree.config.modelComparatorFn});
 
-  function possiblyAddChildren(source, dest) {
+  function pruneChildren(source) {
     if (source.hasChildren()) {
-      var shouldAdd = testNode(source); // check the children either way
+      var shouldAdd = testNode(source);
+      var kids=[];
       source.children.forEach(function (sourceChild) {
-        var model = _.clone(sourceChild.model);
-        delete model.children;
-        var destChild = treeModel.parse(model);
-        if (possiblyAddChildren(sourceChild, destChild)) {
-          dest.addChild(destChild);
-          shouldAdd = true;
-        }
+        var destChild = pruneChildren(sourceChild);
+        if (destChild) kids.push(destChild);
       });
-      return shouldAdd;
+      if (shouldAdd || kids.length > 0) {
+        if (kids.length === 1) {
+          kids[0].model.distance_to_parent += source.model.distance_to_parent;
+          return kids[0];
+        }
+        else {
+          // create a new node and add the kids to it
+          let model = _.clone(source.model);
+          delete model.children;
+          var parent = treeModel.parse(model);
+          kids.forEach(function (k) {
+            parent.addChild(k);
+          });
+          return parent;
+        }
+      }
     }
     else if (testNode(source)) {
-      return true;
+      let model = _.clone(source.model);
+      return treeModel.parse(model);
     }
     return false;
   }
 
-  var treeModel = new TreeModel({modelComparatorFn: tree.config.modelComparatorFn});
-  var model = _.clone(tree.model);
-  delete model.children;
-  var root = treeModel.parse(model);
-  possiblyAddChildren(tree, root);
-
+  // var model = _.clone(tree.model);
+  // delete model.children;
+  // var root = treeModel.parse(model);
+  var root = pruneChildren(tree); //, root);
+  if (!root.model._id) {
+    root.model._id = tree.model._id;
+    root.model.tree_stable_id = tree.model.tree_stable_id;
+  }
   if (tree.indices) {
     indexTree(root, Object.keys(tree.indices));
   }
