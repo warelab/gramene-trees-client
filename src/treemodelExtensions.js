@@ -144,7 +144,7 @@ function pruneTree(tree, testNode) {
         }
       }
     }
-    else if (testNode(source)) {let
+    else if (testNode(source)) {
       var leaf = _.clone(source.model);
       return treeModel.parse(leaf);
     }
