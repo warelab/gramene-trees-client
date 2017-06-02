@@ -202,36 +202,46 @@ function identity(geneA, geneB) {
 function cigarToConsensus(cigar, seq) {
 
   var pieces = cigar.split(/([DM])/);
-  var size = 0;
-  var stretch = 0;
-  var alignseq = "";
-  var frequency = [];
+  var clength=0;
+  var stretch=0;
+  pieces.forEach(function (piece) {
+    if (piece === "M" || piece === "D") {
+      if (stretch === 0) stretch = 1;
+      clength += stretch;
+    }
+    else {
+      stretch = +piece;
+    }
+  });
 
+  var size = 0;
+  var gap = '-'.charCodeAt(0);
+  var alignseq = new Uint16Array(clength);
+  var frequency = new Uint16Array(clength);
+  alignseq.fill(gap);
+  var offset=0;
   pieces.forEach(function (piece) {
     if (piece === "M") {
       if (stretch === 0) stretch = 1;
-      alignseq += seq.substr(size, stretch);
-      size += stretch;
-      for (i = 0; i < stretch; i++) {
-        frequency.push(1);
+
+      frequency.fill(1,offset,offset + stretch);
+      for(var i=0;i<stretch;i++) {
+        offset++;
+        alignseq[offset] = seq.charCodeAt(size + i);
       }
+      size += stretch;
       stretch = 0;
     }
     else if (piece === "D") {
       if (stretch === 0) stretch = 1;
-      alignseq += '-'.repeat(stretch);
-      for (i = 0; i < stretch; i++) {
-        frequency.push(0);
-      }
-      stretch = 0;
-      //size += stretch;
+      offset += stretch;
       stretch = 0;
     }
     else if (!!piece) {
       stretch = +piece;
     }
   });
-  return {sequence: alignseq.split(''), frequency: frequency};
+  return {sequence: alignseq, frequency: frequency};
 }
 
 function addConsensus(tree) {
@@ -241,32 +251,29 @@ function addConsensus(tree) {
   // for internal nodes (2 children) select the consensus based on the frequency in the child nodes
   if (tree.model.consensus) return;
 
+  function mergeConsensi(A,B) {
+    let res = _.cloneDeep(A);
+    const len = A.sequence.length;
+    for(let i=0; i<len; i++) {
+      if (B.sequence[i] === res.sequence[i]) {
+        res.frequency[i] += B.frequency[i];
+      }
+      else if (B.frequency[i] > res.frequency[i]) {
+        res.frequency[i] = B.frequency[i];
+        res.sequence[i] = B.sequence[i];
+      }
+    }
+    return res;
+  }
+
   function addConsensusToNode(node) {
     if (node.model.sequence && node.model.cigar) {
-      // parse the cigar string and generate a consensus sequence
       node.model.consensus = cigarToConsensus(node.model.cigar, node.model.sequence);
     }
     else {
-      node.children.forEach(function (child) {
-        addConsensusToNode(child);
-        if (!node.model.consensus) {
-          node.model.consensus = _.cloneDeep(child.model.consensus)
-        }
-        else {
-          for (var i = 0; i < child.model.consensus.sequence.length; i++) {
-            if (child.model.consensus.sequence[i] === node.model.consensus.sequence[i]) {
-              node.model.consensus.frequency[i] += child.model.consensus.frequency[i];
-            }
-            else if (child.model.consensus.frequency[i] > node.model.consensus.frequency[i]) {
-              node.model.consensus.frequency[i] = child.model.consensus.frequency[i];
-              node.model.consensus.sequence[i] = child.model.consensus.sequence[i];
-            }
-            else {
-
-            }
-          }
-        }
-      });
+      addConsensusToNode(node.children[0]);
+      addConsensusToNode(node.children[1]);
+      node.model.consensus = mergeConsensi(node.children[0].model.consensus, node.children[1].model.consensus);
     }
   }
 
@@ -277,42 +284,65 @@ function addConsensus(tree) {
 function removeGaps(tree) {
   // if there are gaps in the tree root's consensus, identify them and remove them from the rest of the tree
   // remove gaps from the consensus, and from the cigar string in the leaf nodes (maybe ?)
-  var msaLength = tree.model.consensus.frequency.length;
-  var noGapSequence = [];
-  var noGapFrequency = [];
-  var isGap = [];
+  const msaLength = tree.model.consensus.frequency.length;
+  let nonGapStarts = [];
+  let nonGapLengths = [];
+  let nonGapStart = -99;
+  let nonGapLength = 0;
+  let totalLength = 0;
   for (var i = 0; i < msaLength; i++) {
     if (tree.model.consensus.frequency[i] > 0) {
-      noGapSequence.push(tree.model.consensus.sequence[i]);
-      noGapFrequency.push(tree.model.consensus.frequency[i]);
-      isGap[i] = false;
+      if (i === nonGapStart + nonGapLength) { // extending a non-gap
+        nonGapLength++;
+      }
+      else { // start of a new gap
+        nonGapStart = i;
+        nonGapLength = 1;
+      }
     }
-    else {
-      isGap[i] = true;
+    else { // gap position
+      if (nonGapLength) {
+        totalLength += nonGapLength;
+        nonGapStarts.push(nonGapStart);
+        nonGapLengths.push(nonGapLength);
+        nonGapLength = 0;
+      }
     }
   }
-  if (noGapFrequency.length < msaLength) { // we actually removed some gaps
-    tree.model.consensus.frequency = noGapFrequency;
-    tree.model.consensus.sequence = noGapSequence;
-    function removeGapsFromChildren(node) {
+  if (nonGapLength) {
+    totalLength += nonGapLength;
+    nonGapStarts.push(nonGapStart);
+    nonGapLengths.push(nonGapLength);
+  }
+
+  if (totalLength < msaLength) {
+    function removeGapsFromNode(node) {
+      let consensus = {
+        sequence: new Uint16Array(totalLength),
+        frequency: new Uint16Array(totalLength)
+      };
+      let srcSeqBuffer = node.model.consensus.sequence.buffer;
+      let srcFreqBuffer = node.model.consensus.frequency.buffer;
+      let dstSeqBuffer = consensus.sequence.buffer;
+      let dstFreqBuffer = consensus.frequency.buffer;
+      let dstOffset = 0;
+      for(let i=0; i<nonGapStarts.length; i++) {
+        let srcOffset = 2*nonGapStarts[i];
+        let lengthInBytes = 2*nonGapLengths[i];
+        let srcU8 = new Uint8Array(srcSeqBuffer, srcOffset, lengthInBytes);
+        let dstU8 = new Uint8Array(dstSeqBuffer, dstOffset, lengthInBytes);
+        dstU8.set(srcU8);
+        srcU8 = new Uint8Array(srcFreqBuffer, srcOffset, lengthInBytes);
+        dstU8 = new Uint8Array(dstFreqBuffer, dstOffset, lengthInBytes);
+        dstU8.set(srcU8);
+        dstOffset += lengthInBytes;
+      }
+      node.model.consensus = consensus;
       node.children.forEach(function (child) {
-        var noGapSequence = [];
-        var noGapFrequency = [];
-        for (var i = 0; i < child.model.consensus.sequence.length; i++) {
-          if (!isGap[i]) {
-            noGapSequence.push(child.model.consensus.sequence[i]);
-            noGapFrequency.push(child.model.consensus.frequency[i]);
-          }
-        }
-        child.model.consensus.sequence = noGapSequence;
-        child.model.consensus.frequency = noGapFrequency;
-        if (child.children) {
-          removeGapsFromChildren(child);
-        }
+        removeGapsFromNode(child);
       });
     }
-
-    removeGapsFromChildren(tree);
+    removeGapsFromNode(tree);
   }
 }
 
