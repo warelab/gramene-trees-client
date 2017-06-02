@@ -189,10 +189,11 @@ function identity(geneA, geneB) {
 
   var matchCnt = 0;
   var totalCnt = 0;
+  let gapCode = '-'.charCodeAt(0);
   for(var i=0; i<seqA.length; i++) {
     totalCnt++;
     if (seqA[i] === seqB[i]) {
-      if (seqA[i] === '-') totalCnt--;
+      if (seqA[i] === gapCode) totalCnt--;
       else matchCnt++;
     }
   }
