@@ -154,7 +154,7 @@ function pruneTree(tree, testNode) {
   // var model = _.clone(tree.model);
   // delete model.children;
   // var root = treeModel.parse(model);
-  var root = pruneChildren(tree); //, root);
+  var root = pruneChildren(tree);
   if (!root.model._id) {
     root.model._id = tree.model._id;
     root.model.tree_stable_id = tree.model.tree_stable_id;
