@@ -214,7 +214,7 @@ function cigarToConsensus(cigar, seq) {
       stretch = +piece;
     }
   });
-
+  stretch = 0;
   var size = 0;
   var gap = '-'.charCodeAt(0);
   var alignseq = new Uint16Array(clength);
@@ -226,8 +226,7 @@ function cigarToConsensus(cigar, seq) {
       if (stretch === 0) stretch = 1;
       frequency.fill(1,offset,offset + stretch);
       for(var i=0;i<stretch;i++) {
-        offset++;
-        alignseq[offset] = seq.charCodeAt(size + i);
+        alignseq[offset++] = seq.charCodeAt(size + i);
       }
       size += stretch;
       stretch = 0;
@@ -288,7 +287,7 @@ function removeGaps(tree) {
   const msaLength = tree.model.consensus.frequency.length;
   let nonGapStarts = [];
   let nonGapLengths = [];
-  let nonGapStart = -99;
+  let nonGapStart = 0;
   let nonGapLength = 0;
   let totalLength = 0;
   for (var i = 0; i < msaLength; i++) {
@@ -296,7 +295,7 @@ function removeGaps(tree) {
       if (i === nonGapStart + nonGapLength) { // extending a non-gap
         nonGapLength++;
       }
-      else { // start of a new gap
+      else { // start of a new non-gap
         nonGapStart = i;
         nonGapLength = 1;
       }
@@ -319,6 +318,8 @@ function removeGaps(tree) {
   if (totalLength < msaLength) {
     function removeGapsFromNode(node) {
       let consensus = {
+        nSeqs: node.model.consensus.nSeqs,
+        consensusLength: totalLength,
         sequence: new Uint16Array(totalLength),
         frequency: new Uint16Array(totalLength)
       };
