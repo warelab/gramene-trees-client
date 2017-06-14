@@ -224,7 +224,6 @@ function cigarToConsensus(cigar, seq) {
   pieces.forEach(function (piece) {
     if (piece === "M") {
       if (stretch === 0) stretch = 1;
-
       frequency.fill(1,offset,offset + stretch);
       for(var i=0;i<stretch;i++) {
         offset++;
@@ -242,7 +241,7 @@ function cigarToConsensus(cigar, seq) {
       stretch = +piece;
     }
   });
-  return {sequence: alignseq, frequency: frequency};
+  return {sequence: alignseq, frequency: frequency, nSeqs: 1, consensusLength: clength};
 }
 
 function addConsensus(tree) {
@@ -255,6 +254,7 @@ function addConsensus(tree) {
   function mergeConsensi(A,B) {
     let res = _.cloneDeep(A);
     const len = A.sequence.length;
+    res.nSeqs += B.nSeqs;
     for(let i=0; i<len; i++) {
       if (B.sequence[i] === res.sequence[i]) {
         res.frequency[i] += B.frequency[i];
