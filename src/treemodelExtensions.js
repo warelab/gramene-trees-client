@@ -248,6 +248,7 @@ function addConsensus(tree) {
   // the consensus is a string and an array of frequencies (gap frequencies are always 0)
   // for leaf nodes use the sequence and cigar attributes to define the node's consensus
   // for internal nodes (2 children) select the consensus based on the frequency in the child nodes
+  // todo: try run-length encoding to save memory?
   if (tree.model.consensus) return;
 
   function mergeConsensi(A,B) {
