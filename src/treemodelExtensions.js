@@ -189,7 +189,7 @@ function identity(geneA, geneB) {
 
   var matchCnt = 0;
   var totalCnt = 0;
-  let gapCode = '-'.charCodeAt(0);
+  var gapCode = '-'.charCodeAt(0);
   for(var i=0; i<seqA.length; i++) {
     totalCnt++;
     if (seqA[i] === seqB[i]) {
@@ -252,10 +252,10 @@ function addConsensus(tree) {
   if (tree.model.consensus) return;
 
   function mergeConsensi(A,B) {
-    let res = _.cloneDeep(A);
+    var res = _.cloneDeep(A);
     const len = A.sequence.length;
     res.nSeqs += B.nSeqs;
-    for(let i=0; i<len; i++) {
+    for(var i=0; i<len; i++) {
       if (B.sequence[i] === res.sequence[i]) {
         res.frequency[i] += B.frequency[i];
       }
@@ -286,11 +286,11 @@ function removeGaps(tree) {
   // if there are gaps in the tree root's consensus, identify them and remove them from the rest of the tree
   // remove gaps from the consensus, and from the cigar string in the leaf nodes (maybe ?)
   const msaLength = tree.model.consensus.frequency.length;
-  let nonGapStarts = [];
-  let nonGapLengths = [];
-  let nonGapStart = 0;
-  let nonGapLength = 0;
-  let totalLength = 0;
+  var nonGapStarts = [];
+  var nonGapLengths = [];
+  var nonGapStart = 0;
+  var nonGapLength = 0;
+  var totalLength = 0;
   for (var i = 0; i < msaLength; i++) {
     if (tree.model.consensus.frequency[i] > 0) {
       if (i === nonGapStart + nonGapLength) { // extending a non-gap
@@ -318,22 +318,22 @@ function removeGaps(tree) {
 
   if (totalLength < msaLength) {
     function removeGapsFromNode(node) {
-      let consensus = {
+      var consensus = {
         nSeqs: node.model.consensus.nSeqs,
         consensusLength: totalLength,
         sequence: new Uint16Array(totalLength),
         frequency: new Uint16Array(totalLength)
       };
-      let srcSeqBuffer = node.model.consensus.sequence.buffer;
-      let srcFreqBuffer = node.model.consensus.frequency.buffer;
-      let dstSeqBuffer = consensus.sequence.buffer;
-      let dstFreqBuffer = consensus.frequency.buffer;
-      let dstOffset = 0;
+      var srcSeqBuffer = node.model.consensus.sequence.buffer;
+      var srcFreqBuffer = node.model.consensus.frequency.buffer;
+      var dstSeqBuffer = consensus.sequence.buffer;
+      var dstFreqBuffer = consensus.frequency.buffer;
+      var dstOffset = 0;
       for(let i=0; i<nonGapStarts.length; i++) {
-        let srcOffset = 2*nonGapStarts[i];
-        let lengthInBytes = 2*nonGapLengths[i];
-        let srcU8 = new Uint8Array(srcSeqBuffer, srcOffset, lengthInBytes);
-        let dstU8 = new Uint8Array(dstSeqBuffer, dstOffset, lengthInBytes);
+        var srcOffset = 2*nonGapStarts[i];
+        var lengthInBytes = 2*nonGapLengths[i];
+        var srcU8 = new Uint8Array(srcSeqBuffer, srcOffset, lengthInBytes);
+        var dstU8 = new Uint8Array(dstSeqBuffer, dstOffset, lengthInBytes);
         dstU8.set(srcU8);
         srcU8 = new Uint8Array(srcFreqBuffer, srcOffset, lengthInBytes);
         dstU8 = new Uint8Array(dstFreqBuffer, dstOffset, lengthInBytes);
