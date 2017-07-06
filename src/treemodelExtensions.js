@@ -329,7 +329,7 @@ function removeGaps(tree) {
       var dstSeqBuffer = consensus.sequence.buffer;
       var dstFreqBuffer = consensus.frequency.buffer;
       var dstOffset = 0;
-      for(let i=0; i<nonGapStarts.length; i++) {
+      for(var i=0; i<nonGapStarts.length; i++) {
         var srcOffset = 2*nonGapStarts[i];
         var lengthInBytes = 2*nonGapLengths[i];
         var srcU8 = new Uint8Array(srcSeqBuffer, srcOffset, lengthInBytes);
