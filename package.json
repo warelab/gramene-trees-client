@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "flat-to-nested": "^1.0.1",
-    "gramene-search-client": "2.6.2",
+    "gramene-search-client": "^3.0.4",
     "lodash": "^3.6.0",
     "q": "^1.5.0",
     "tree-model": "^1.0.0"
