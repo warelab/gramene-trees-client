@@ -27,7 +27,7 @@ module.exports = {
       });
     }
     return src
-      .then(validateFactory('TaxonomyResponse'))
+      // .then(validateFactory('TaxonomyResponse'))
       .then(justTheData)
       .then(taxonomyPromise);
   }

@@ -1,7 +1,7 @@
 var Q = require('q');
 var genomeFixture = require('../support/taxonomyFixture');
 
-global.gramene = { defaultServer: 'http://data.gramene.org/v50/swagger' };
+global.gramene = { defaultServer: 'http://data.gramene.org/v54/swagger' };
 
 var client = require('gramene-search-client').client.grameneClient;
 
@@ -34,7 +34,7 @@ describe('TaxonomyPromise', function() {
       // then
       iWasCalled = true;
       expect(tree).toBeDefined();
-      expect(tree.all().length).toEqual(68);
+      expect(tree.all().length).toEqual(76);
       return tree;
     }
 
@@ -49,6 +49,6 @@ describe('TaxonomyPromise', function() {
     taxonomyFunctions.then(checkTheThingReturnedIsTheRightShape)
       .catch(thereShouldBeNoErrors);
 
-    waitsFor(ensureTestResultCalled, 'the taxonomy functions to be created', 5000);
+    waitsFor(ensureTestResultCalled, 'the taxonomy functions to be created', 50000);
   });
 });
