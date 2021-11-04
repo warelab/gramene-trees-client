@@ -1,6 +1,6 @@
 {
   "name": "gramene-trees-client",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "description": "Provide API for trees",
   "main": "index.js",
   "scripts": {
