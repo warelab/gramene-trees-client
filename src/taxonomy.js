@@ -34,16 +34,25 @@ module.exports = {
       });
     }
 
-    function createTree(nestedTaxa) {
-      function childNodeNameLexComparator(a, b) {
-        return a.name > b.name ? 1 : -1;
-      }
-      function childNodeGeneCountComparator(a, b) {
-        return a.geneCount < b.geneCount ? 1 : -1;
-      }
+		function createTree(nestedTaxa) {
+		  function childNodeNameLexComparator(a, b) {
+		    return a.name > b.name ? 1 : -1;
+		  }
+		  function childNodeGeneCountComparator(a, b) {
+		    return a.geneCount < b.geneCount ? 1 : -1;
+		  }
+		  function childNodeComparator(a, b) {
+		    if (a.hasOwnProperty('leftIndex')) {
+		      return a.leftIndex < b.leftIndex ? -1 : 1;
+		    }
+		    if (a.hasOwnProperty('geneCount')) {
+		      return a.geneCount < b.geneCount ? 1 : -1;
+		    }
+		    return a.name > b.name ? 1 : -1;
+		  }
 
-      return new TreeModel({modelComparatorFn: childNodeGeneCountComparator}).parse(nestedTaxa);
-    }
+		  return new TreeModel({modelComparatorFn: childNodeComparator}).parse(nestedTaxa);
+		}
 
     function compressTreePaths(tree) {
       tree.all(function (node) {
