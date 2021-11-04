@@ -29,6 +29,7 @@ module.exports = {
           name: taxon.name,
           synonyms: taxon.synonym || [],
           geneCount: taxon.num_genes,
+					leftIndex: taxon.left_index || 0,
           reactomePrefix: taxon.reactomePrefix
         };
       });
@@ -42,10 +43,10 @@ module.exports = {
 		    return a.geneCount < b.geneCount ? 1 : -1;
 		  }
 		  function childNodeComparator(a, b) {
-		    if (a.hasOwnProperty('leftIndex')) {
+		    if (a.leftIndex) {
 		      return a.leftIndex < b.leftIndex ? -1 : 1;
 		    }
-		    if (a.hasOwnProperty('geneCount')) {
+		    if (a.geneCount) {
 		      return a.geneCount < b.geneCount ? 1 : -1;
 		    }
 		    return a.name > b.name ? 1 : -1;
